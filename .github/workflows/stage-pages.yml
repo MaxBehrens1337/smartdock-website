@@ -4,7 +4,7 @@ on:
     branches: [staging]
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 concurrency:
@@ -17,28 +17,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: staging
-      - name: Restore verified website snapshot
-        if: ${{ hashFiles('dist/index.html') == '' }}
-        shell: python
-        run: |
-          from pathlib import Path
-          import hashlib, io, tarfile
-          parts = sorted(Path('.').glob('website-part-*'))
-          assert len(parts) == 14, f'Incomplete snapshot: {len(parts)} chunks'
-          data = b''.join(p.read_bytes() for p in parts)
-          assert hashlib.sha256(data).hexdigest() == '1945dd21c40518f73c1d16e1541f7da6b6d5193196bcec238bc5163afaefe5b3'
-          with tarfile.open(fileobj=io.BytesIO(data), mode='r:gz') as archive:
-              archive.extractall('.', filter='data')
-          print('Website snapshot restored')
-      - name: Save website files on staging
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add dist
-          if ! git diff --cached --quiet; then
-            git commit -m 'Import SMARTDOCK Version 7 website files'
-            git push origin HEAD:staging
-          fi
       - name: Prepare Pages artifact
         shell: python
         run: |
@@ -93,3 +71,4 @@ jobs:
       - name: Publish stage
         id: deployment
         uses: actions/deploy-pages@v4
+
