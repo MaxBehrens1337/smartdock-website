@@ -24,7 +24,7 @@ jobs:
           from pathlib import Path
           import hashlib, io, tarfile
           parts = sorted(Path('.').glob('website-part-*'))
-          assert len(parts) == 4, f'Incomplete snapshot: {len(parts)} chunks'
+          assert len(parts) == 14, f'Incomplete snapshot: {len(parts)} chunks'
           data = b''.join(p.read_bytes() for p in parts)
           assert hashlib.sha256(data).hexdigest() == '1945dd21c40518f73c1d16e1541f7da6b6d5193196bcec238bc5163afaefe5b3'
           with tarfile.open(fileobj=io.BytesIO(data), mode='r:gz') as archive:
