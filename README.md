@@ -2,6 +2,13 @@
 
 Gemeinsamer Website-Stand und Stage-Vorschau für das Marketing-Team.
 
+**Einstieg:** [Projektübersicht und nächste Schritte](docs/projektuebersicht.md)
+mit Bestand, vollständigem Staging-Umfang und offenen Entscheidungen.
+
+- [Staging-Vorschau](https://thitronik.github.io/smartdock-website/)
+- [Zusammenarbeit und Veröffentlichung](TEAM-WORKFLOW.md)
+- [Dokumentierter Stand der Vorschau](PAGES-STATUS.md)
+
 - `dist/`: Website-Dateien mit HTML, CSS, JavaScript, Bildern und PDFs.
 - `staging`: Arbeitsstand für GitHub Pages. Änderungen lösen den Pages-Workflow aus.
 - `main`: freigegebene Stände; keine automatische Hetzner-Veröffentlichung.
