@@ -6,7 +6,8 @@ Stand: 21. Oktober 2026. Status: Projektaufschlag zur gemeinsamen Prüfung.
 
 Wir entwickeln die SMARTDOCK-Website gemeinsam über dieses Repository weiter.
 GitHub ist der zentrale Ort für Quellcode, Aufgaben, Prüfungen und nachvollziehbare Entscheidungen.
-Zum Team gehören Max und vier weitere Personen.
+Zum Team gehören **Marlene, Adrian, Sönke und Max**: insgesamt vier Personen.
+Fachliche Zuständigkeiten und GitHub-Benutzernamen werden gemeinsam zugeordnet.
 
 Die vollständige bestehende [Staging-Vorschau](https://thitronik.github.io/smartdock-website/)
 ist unsere fachliche und gestalterische Ausgangsbasis. Alle dort vorhandenen Seiten,
