@@ -2,6 +2,8 @@
 
 Stand: 21. Oktober 2026. Max hat bestätigt, dass die ursprüngliche Bauanleitung bzw. der Zugang nicht verfügbar ist. Die vorhandene Staging-Website bleibt der vollständige Ausgangspunkt.
 
+Ursprung: SMARTDOCK-Nachbau Version 7, ursprünglicher Sites-Commit `dfc2867dbbf38c536b01fe62d02bfe4dc62f6104`. Dies ist kein ursprünglicher unkompilierter Hostinger-Projektexport.
+
 ## Entscheidung und Grenze
 
 Wir stellen einen eigenen reproduzierbaren Build um den vorhandenen Export her und ersetzen dessen kompilierte Teile anschließend schrittweise. Für diesen ersten Schritt reicht Node 24 ohne zusätzliche npm-Pakete. Ein Wechsel zu Astro oder einem anderen Framework ist dafür nicht nötig und wurde nicht beschlossen.
@@ -50,7 +52,7 @@ Pages-Vorschau: `http://127.0.0.1:4174/smartdock-website/`. Nach Änderungen ern
 - `npm run check` prüft beide Builds, JSON, alle JavaScript-Dateien, lokale Ressourcen der HTML-Hüllen, PDF-Kennungen, FAQ-Sprachfelder sowie die 60 CH-Weiterleitungsfälle. Tests prüfen unter anderem Pfadgrenzen, Navigation und deterministische Ausgabe.
 - CI führt diese Prüfung unter Linux und Windows aus und stellt die gebaute Pages-Vorschau als herunterladbares Artefakt bereit. Ein PR veröffentlicht keine neue Website. Erst ein Merge nach staging aktiviert den vorhandenen Pages-Deploy.
 
-Die Projektgrundlage mit Banner (#2), die FAQ-Korrekturen (#4), der Prüfbericht (#7) und die Weiterleitungskorrektur (#10) werden in diesem gemeinsamen Aufbau zusammengeführt. Ihre Commit-Historien bleiben erhalten. Der bestehende PR #1 bleibt anschließend der Weg von staging nach main.
+Die Projektgrundlage mit Banner (#2), die FAQ-Korrekturen (#4), der Prüfbericht (#7) und die Weiterleitungskorrektur (#10) wurden über PR #12 mit erhaltener Commit-Historie zusammengeführt und über PR #1 nach main übernommen. Die [veröffentlichte Vorschau](../betrieb/vorschau.md) dokumentiert die Nachprüfung.
 
 Lokale Browser-Stichproben nach dem Neubau: Startseite unter Root und Pages, FAQ-Daten und korrigierte Formulierung „Verbundene Geräte“, CH-FAQ-Weiterleitung mit Query/Hash, die fünf Sprach-Startseiten, eigenständiges CH-Position-Hold sowie Navigation Startseite → Position Hold → Konfigurator unter Pages. Der Preisfall Deutschland/eine Ankerwinde/kein Einbau zeigt weiterhin ACU und 1.450,00 €. Das ist ein technischer Vergleich, keine Preisfreigabe.
 
