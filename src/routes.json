@@ -1,0 +1,698 @@
+[
+  {
+    "path": "/agb-en/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/agb/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/barrierefreiheit-en/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/barrierefreiheit/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/agb/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/barrierefreiheit/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/contact/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/datenschutz/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/faq/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/features/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/funktionen/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/haendlerfinder/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/impressum/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/installation/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/konfigurator/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/positionhold/",
+    "application": "positionhold",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/produkt/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/versandbedingungen/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/ch/widerrufsbelehrung/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/datenschutz/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/accessibility/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/contact/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/dealer-finder/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/faq/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/features-legacy/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/features/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/find-retailer/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/functions/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/imprint/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/installation/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/positionhold/",
+    "application": "positionhold",
+    "htmlLang": "en",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/privacy/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/product/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/right-of-withdrawal/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/shipping/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/smartdock-configurator/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/en/terms/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/accesibilidad/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/aviso-legal/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/configurador/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/contacto/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/desistimiento/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/distribuidores/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/envios/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/faq/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/funciones-legado/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/funciones/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/instalacion/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/positionhold/",
+    "application": "positionhold",
+    "htmlLang": "es",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/privacidad/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/producto/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/es/terminos/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/faq/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/features/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/accessibilite/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/cgv/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/confidentialite/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/configurateur/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/droit-de-retractation/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/faq/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/fonctionnalites/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/fonctions/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/installation/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/livraison/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/mentions-legales/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/produit/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr-fr/revendeurs/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/accessibilite/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/cgv/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/confidentialite/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/configurateur/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/contact/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/droit-de-retractation/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/faq/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/fonctionnalites/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/fonctions/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/installation/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/livraison/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/mentions-legales/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/positionhold/",
+    "application": "positionhold",
+    "htmlLang": "fr",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/produit/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/fr/revendeurs/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/funktionen/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/haendlerfinder/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/impressum-en/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/impressum/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/installation/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/konfigurator/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/algemene-voorwaarden/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/colofon/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/configurator/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/contact/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/dealers/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/faq/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/functies/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/functionaliteiten/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/herroepingsrecht/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/installatie/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/positionhold/",
+    "application": "positionhold",
+    "htmlLang": "nl",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/privacy/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/product/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/toegankelijkheid/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/nl/verzending/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/positionhold/",
+    "application": "positionhold",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/produkt/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/versandbedingungen-en/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/versandbedingungen/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/widerrufsbelehrung-en/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  },
+  {
+    "path": "/widerrufsbelehrung/",
+    "application": "main",
+    "htmlLang": "de",
+    "lineEnding": "lf"
+  }
+]
