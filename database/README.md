@@ -1,7 +1,15 @@
 # SMARTDOCK Datenbank
 
-Vorbereitete Erstmigration für MariaDB 10.6 oder neuer. Noch nicht auf einer
-Hetzner-Datenbank ausgeführt oder dort getestet. Die Website bleibt im Vorschaumodus.
+Erstmigration für MariaDB 10.6 oder neuer. Am 21.10.2026 auf der vorgesehenen
+Hetzner-Datenbank ausgeführt (MariaDB 11.8.6). Ausgangsbestand: keine Tabellen.
+Schema aus Commit `9e09cf0f898db6acf20b675196ec108a0ec24f78`.
+Alle fünf CREATE-TABLE-Anweisungen wurden erfolgreich ausgeführt; anschließend
+wurden alle fünf Tabellen mit SHOW CREATE TABLE abgefragt und ihre Bestände
+mit COUNT(*) geprüft: jeweils 0 Datensätze. Die Tabellenübersicht bestätigt
+InnoDB und utf8mb4_unicode_ci. Die Migration nicht erneut ausführen.
+
+Backend, Double-Opt-in und Mailversand sind noch nicht angebunden oder getestet.
+Die Website bleibt im Vorschaumodus.
 
 ## Tabellen
 
