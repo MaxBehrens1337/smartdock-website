@@ -39,6 +39,8 @@ Der eigene Build benötigt keinen ursprünglichen Hostinger-Zugang. Die alten An
 sind damit noch keine lesbaren Originalkomponenten. Grenzen und nächste Schritte stehen im
 [Aufbau- und Migrationsplan](docs/migration/aufbau.md). Gemeinsame Regeln: [AGENTS.md](AGENTS.md).
 
+Die parallel vorbereitete [Datenbankmigration](database/README.md) bleibt separat; der Website-Build führt sie nicht aus und veröffentlicht sie nicht.
+
 ## Bestandsaufnahme und Qualität
 
 - [Bestandsaufnahme, Seitenverzeichnis und Weg zu main](docs/pruefung/bestandsaufnahme-2026-10-21.md)

@@ -63,4 +63,6 @@ Lokale Browser-Stichproben nach dem Neubau: Startseite unter Root und Pages, FAQ
 
 Ein Paket wird erst entfernt, wenn kein Einstieg es mehr benötigt. Bekannte Rechts-, Preis-, Sprach- und Formularprobleme bleiben bis zur jeweiligen Abnahme offen. Ein baubarer Stand ist keine Produktionsfreigabe.
 
+Während des Aufbaus kamen auf staging die Commits `9e09cf0` und `f84a0cc` mit einer vorbereiteten MariaDB-Migration hinzu. [Schema und Importhinweise](../../database/README.md) sind unverändert übernommen. Sie werden nicht in die Website-Ausgabe kopiert und wurden im Rahmen dieses Aufbaus nicht auf einer Datenbank ausgeführt oder fachlich als Backend-Entscheidung freigegeben.
+
 Technische Grundlage des Workflows: [GitHub Pages mit eigenen Workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), [Node-Dateisystem-API](https://nodejs.org/docs/latest-v24.x/api/fs.html).
