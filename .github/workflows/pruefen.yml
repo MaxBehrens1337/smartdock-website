@@ -1,26 +1,32 @@
-name: SMARTDOCK Redirect-Pruefung
-
+name: SMARTDOCK Build und Pruefung
 on:
   pull_request:
     branches: [main, staging]
   push:
     branches: [main, staging]
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
-  legacy-routes:
-    runs-on: ubuntu-latest
+  pruefen:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
       - uses: actions/setup-node@v4
         with:
-          node-version: '24'
-      - name: JavaScript-Syntax
-        run: node --check dist/assets/index-RRVGC1mK.js
-      - name: Schweizer Altpfade und URL-Anhaenge
-        run: node tools/check-legacy-routes.mjs
+          node-version: 24
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run check
+      - name: Prüffähige Pages-Dateien anhängen
+        if: runner.os == 'Linux'
+        uses: actions/upload-artifact@v4
+        with:
+          name: smartdock-pages-preview
+          path: _site
+          include-hidden-files: true
+          retention-days: 14

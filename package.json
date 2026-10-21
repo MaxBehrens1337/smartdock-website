@@ -1,0 +1,16 @@
+{
+  "name": "smartdock-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "build:pages": "node tools/build.mjs --pages",
+    "preview": "node tools/serve.mjs",
+    "preview:pages": "node tools/serve.mjs --pages",
+    "test": "node --test tools/build.test.mjs",
+    "check": "node tools/check.mjs",
+    "verify:reference": "node tools/verify-reference.mjs"
+  }
+}
