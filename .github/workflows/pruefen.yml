@@ -1,0 +1,26 @@
+name: SMARTDOCK Redirect-Pruefung
+
+on:
+  pull_request:
+    branches: [main, staging]
+  push:
+    branches: [main, staging]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  legacy-routes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: JavaScript-Syntax
+        run: node --check dist/assets/index-RRVGC1mK.js
+      - name: Schweizer Altpfade und URL-Anhaenge
+        run: node tools/check-legacy-routes.mjs
