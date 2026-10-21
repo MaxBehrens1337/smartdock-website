@@ -1,0 +1,12 @@
+{
+  "main": {
+    "title": "SMARTDOCK · Vorschau",
+    "stylesheet": "/assets/style.css",
+    "entry": "/assets/index-RRVGC1mK.js"
+  },
+  "positionhold": {
+    "title": "SMARTDOCK Position Hold",
+    "stylesheet": "/assets/positionhold.css",
+    "entry": "/assets/positionhold.js"
+  }
+}

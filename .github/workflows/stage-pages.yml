@@ -5,8 +5,6 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
   group: smartdock-pages-stage
   cancel-in-progress: false
@@ -17,52 +15,22 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: staging
-      - name: Prepare Pages artifact
-        shell: python
-        run: |
-          """Create a Pages artifact; leave the tracked Hetzner-ready dist unchanged."""
-          from pathlib import Path
-          import re
-          import shutil
-
-          base = '/smartdock-website'
-          out = Path('_site')
-          shutil.copytree('dist', out, dirs_exist_ok=True)
-          for path in out.rglob('*'):
-              if not path.is_file() or path.suffix not in {'.html', '.js', '.css', '.json'}:
-                  continue
-              text = path.read_text()
-              # Resources need the project prefix, but React Router route definitions do not.
-              text = re.sub(r'(?<![\w:/])/(assets|media|hcgi|data)/', base + r'/\1/', text)
-              text = text.replace('"/favicon.png"', '"' + base + '/favicon.png"')
-              text = text.replace('"/preview.js"', '"' + base + '/preview.js"')
-              if path.suffix == '.js':
-                  text = re.sub(r'basename:([A-Za-z_$][\w$]*)="/"', r'basename:\1="' + base + '"', text)
-                  text = re.sub(r'window\.location\.href=([A-Za-z_$][\w$]*)(?=[,;}])', r'window.location.href=window.__sdPagesUrl(\1)', text)
-                  text = text.replace('window.location.href="/"', 'window.location.href="' + base + '/"')
-              if path.name == 'positionhold.js':
-                  text = text.replace('vA=window.location.origin', 'vA=window.location.origin+"' + base + '"')
-              if path.name == 'preview.js':
-                  text = text.replace('const match = url.pathname.match(', 'const match = url.pathname.replace("' + base + '", "").match(')
-              if path.suffix in {'.html', '.js'}:
-                  text = re.sub(r'(href[=:]["\x27])/(?!/|' + re.escape(base[1:]) + r'(?:/|["\x27]))', r'\1' + base + '/', text)
-              if path.suffix == '.html':
-                  helper = '<script>window.__sdPagesUrl=function(u){if(typeof u!=="string")return u;try{var v=new URL(u,location.href);if(v.origin===location.origin&&!v.pathname.startsWith("' + base + '/")&&v.pathname!=="' + base + '")return "' + base + '"+v.pathname+v.search+v.hash}catch(e){}return u};document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(a){var u=a.getAttribute("href");if(u&&u.startsWith("/")&&!u.startsWith("//"))a.setAttribute("href",window.__sdPagesUrl(u))}},true);</script>'
-                  text = text.replace('<head>', '<head>' + helper, 1)
-              path.write_text(text)
-          (out / '.nojekyll').touch()
-          print('Pages artifact ready:', out)
-      - name: Verify JavaScript syntax
-        run: |
-          node --check _site/assets/index-RRVGC1mK.js
-          node --check _site/assets/positionhold.js
-          node --check _site/preview.js
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Prüfen und beide Vorschauvarianten bauen
+        run: npm run check
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

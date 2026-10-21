@@ -1,27 +1,44 @@
 # SMARTDOCK: Zusammenarbeit und Veröffentlichung
 
+Ziele, Bestand, offene Entscheidungen und erste Arbeitspakete stehen zentral in der
+[Projektübersicht](docs/projektuebersicht.md).
+
 ## Arbeitsweise
 
-- `main` enthält freigegebene Stände. Ein Merge veröffentlicht nichts automatisch.
-- `staging` sammelt Änderungen für die gemeinsame Prüfung. Ein Branch allein ist noch keine aufrufbare Vorschau.
+- main enthält freigegebene Stände. Ein Merge nach main veröffentlicht derzeit nichts automatisch.
+- staging trägt die gemeinsame GitHub-Pages-Vorschau. Ein Merge nach staging löst deren Veröffentlichung aus.
 - Änderungen erfolgen in eigenen Branches und werden per Pull Request geprüft.
-- Vor jedem Upload auf Hetzner muss der genaue Quellstand auf GitHub gespeichert sein.
-- Zuerst Stage prüfen; Live-Veröffentlichung erfolgt erst nach ausdrücklicher Freigabe.
+  Neue Änderungen setzen auf dem dafür relevanten aktuellen Stand auf; die vorhandene Website liegt auf staging.
+- Vor parallelen Änderungen aktuellen Stand prüfen und fremde Änderungen erhalten.
+- Vor jeder Live-Veröffentlichung muss der genaue Quellstand auf GitHub gespeichert sein.
+- Zuerst die Vorschau prüfen; die Live-Veröffentlichung erfolgt erst nach ausdrücklicher Freigabe.
 - Keine Passwörter, Tokens, Kundendaten oder Datenbankexporte einchecken.
-- Vor parallelen Änderungen aktuellen Stand laden und fremde Änderungen erhalten.
 
 ## Ausgangsstand
 
-Vorgesehene Quelle: bestehender SMARTDOCK-Nachbau, Sites Version 7, Commit `dfc2867dbbf38c536b01fe62d02bfe4dc62f6104`.
-Dieser Nachbau ist kein ursprünglicher unkompilierter Hostinger-Export.
-Der Website-Code wurde noch nicht in dieses Repository importiert.
+Die 186 Website-Dateien des SMARTDOCK-Nachbaus Version 7 wurden auf staging importiert.
+Der neue [Aufbau](docs/migration/aufbau.md) erzeugt diese Dateien aus getrennten Quellen.
+Ursprünglicher Sites-Commit:
+dfc2867dbbf38c536b01fe62d02bfe4dc62f6104.
 
-## Noch einzurichten
+Der importierte Stand ist ein Website-Export, kein ursprünglicher unkompilierter
+Hostinger-Projektexport. Da die ursprünglichen Quellen nicht zugänglich sind, ersetzt
+ein eigener Build die fehlende Bauanleitung. Die kompilierten Anwendungspakete werden schrittweise abgelöst.
 
-- Website-Quellcode übernehmen und bestehende Prüfungen ausführen.
-- Stage-Vorschau vor Hetzner-Upload einrichten.
-- Getrennte Hetzner-Testumgebung mit Testdaten für PHP/DB/SMTP.
-- Live-Deployment mit dokumentiertem Rückweg.
-- Branchschutz und Teamzugriffe prüfen und einrichten.
+Die [GitHub-Pages-Vorschau](https://thitronik.github.io/smartdock-website/) ist eingerichtet.
+Historische Prüfergebnisse stehen in [PAGES-STATUS.md](PAGES-STATUS.md).
 
-Newsletter und Konfigurationsanfragen bleiben Vorschau-Funktionen, bis das produktive Backend implementiert und geprüft ist.
+## Noch einzurichten oder zu entscheiden
+
+- Teamzugriffe und Zuständigkeiten für Prüfung und Veröffentlichung erfassen.
+- Branchschutz und Aufgabenboard einrichten; die Build-Prüfung läuft bereits für PRs unter Windows und Linux.
+- Gemeinsame Arbeitsregeln in [AGENTS.md](AGENTS.md) pflegen; `npm run check` vor Commit und PR ausführen.
+- Die übernommenen Programmpakete schrittweise durch lesbare Komponenten ersetzen.
+- CMS-Bedarf, Backend, Versand und Produktionshosting anhand der Projektanforderungen entscheiden.
+- Mit der gewählten Lösung Test- und Produktivbetrieb trennen und einen dokumentierten Rückweg vorsehen.
+
+Hetzner war in früheren Planungsnotizen vorgesehen. Die Hosting-Entscheidung ist noch offen;
+es besteht keine automatische Hetzner-Veröffentlichung.
+
+Kontakt und Newsletter versenden in der aktuellen Vorschau keine Nachrichten.
+Konfigurationen bleiben Browser-Testdaten, bis der produktive Ablauf implementiert und geprüft ist.
