@@ -1,3 +1,5 @@
+![SMARTDOCK – Navigate in Control](docs/assets/smartdock-banner.png)
+
 # SMARTDOCK Website
 
 Gemeinsamer Website-Stand und Stage-Vorschau für das Marketing-Team.
