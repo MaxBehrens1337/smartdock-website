@@ -22,9 +22,10 @@ K01 startet mit genau einer elektrischen Ankerwinde und ohne weitere Produkte od
 | K06 | K02: Weiter zum Einbauservice, Service auswählen | ACU 1.450,00 € + Einbau 2.000,00 € = 3.450,00 € | Addition in diesem Fall konsistent |
 | K07 | K06: Zurück zur Systemauswahl; zusätzlich einen Motor auswählen | ECU 3.950,00 € + ACU 1.450,00 € + Einbau 2.000,00 € = 7.400,00 €; Rabatt −500,00 €; Gesamt 6.900,00 € | Addition und Abzug konsistent; noch keine vollständige Herstellerkonfiguration |
 | K08 | K07: Ankerwinde wieder abwählen | ECU + Einbau = 5.950,00 €; Bündelrabatt entfällt | Aktualisierung nach Entfernen in diesem Fall bestanden |
+| K17a | Neue Konfiguration wie K01 bis zum Abschluss; PDF herunterladen, Kontaktdaten leer lassen | Bildschirm und einseitiges PDF: ACU, Deutschland, kein Einbau, Gesamt 1.450,00 €. PDF bezeichnet die enthaltene Bruttosumme jedoch als „Netto“ | Beschriftungsfehler bestätigt: [#11](https://github.com/Thitronik/smartdock-website/issues/11) |
 
 K01/K02/K06–K08 wurden in einem Ablauf geprüft; K03–K05 in einem zweiten Tab.
-Die Zahlen beziehen sich auf die sichtbare Zusammenfassung, nicht auf ein heruntergeladenes PDF.
+K01–K08 beziehen sich auf die sichtbare Zusammenfassung. K17a vergleicht zusätzlich das heruntergeladene PDF; dessen gesamte Seite wurde gerendert und visuell geprüft. Keine Anfrage wurde versendet. Das PDF enthält keinen extrahierbaren Text und ist als Bild aufgebaut; die barrierefreie Nutzbarkeit bleibt zu prüfen.
 Die Fälle ohne vollständig gewählten Hersteller belegen nur die dort angezeigte Zwischenberechnung.
 
 ## Codebefund hinter den Preisunterschieden
@@ -60,7 +61,7 @@ Ein aus dem bestehenden Code abgelesener Betrag darf nicht allein zum fachlichen
 | K14 | Einbau ein / aus in Euro und Schweiz | Servicepreis und Rabattanwendung entsprechen der bestätigten Regel | Offen |
 | K15 | Bündelrabatt: hinzufügen, entfernen, Länderwechsel | Rabatt erscheint ausschließlich in den freigegebenen Fällen | Teilweise: K07/K08 |
 | K16 | Aktionscode gültig / ungültig / Schreibweise / Gültigkeitszeitraum | Anwendung und Kombination mit Einbau/Bündelrabatt entsprechen einer bestätigten Aktion | Fachliche Vorgaben offen |
-| K17 | Bildschirm und heruntergeladenes PDF | Stückliste, Mengen, Währung, Einzelpreise, Rabatte und Summe stimmen überein | Offen |
+| K17 | Bildschirm und heruntergeladenes PDF | Stückliste, Mengen, Währung, Einzelpreise, Rabatte und Summe stimmen überein | K17a: einfache DE-Auswahl geprüft; Beschriftungsfehler #11. Weitere Länder/Einbau/Rabatte offen |
 | K18 | Späterer Anfrage-Datensatz und Backend | Backend berechnet aus freigegebenen Regeln; manipulierte Browserwerte werden nicht als verbindliche Preise übernommen | Backend noch offen |
 | K19 | Ungültige Auswahl und Berechnungsfehler | Verständlicher Fehlerzustand; kein scheinbar gültiges Null-Euro-Angebot | Offen |
 | K20 | Zurücknavigation, Zurücksetzen und erneute Auswahl | Keine veralteten Module, Rabatte oder Summen bleiben stehen | Teilweise: K08 |

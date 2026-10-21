@@ -13,9 +13,12 @@ Die [Projektgrundlage #2](https://github.com/Thitronik/smartdock-website/pull/2)
 ## Prüfstand
 
 - Der vollständige Git-Dateibaum wurde erfasst: 190 Dateien, davon 186 unter dist/.
-- Alle 116 HTML-Einstiegspfade sind einzeln verzeichnet. Die Routen im Hauptbündel wurden mit den vorhandenen Dateien abgeglichen.
+- Alle 116 HTML-Einstiegspfade sind einzeln verzeichnet und im Browser direkt geöffnet worden (79 Hauptpfade, 37 zusätzliche Einstiege). Geprüft wurden erster Seitenaufbau, Zieladresse, sichtbare Überschriften und Titel; das ist keine vollständige Inhalts- oder Interaktionsabnahme.
+- 13 fehlerhafte CH-Weiterleitungen sind in #8 erfasst und in PR #10 korrigiert; 60/60 Regressionfälle bestehen lokal und in GitHub Actions. Die veröffentlichte Vorschau enthält die Korrektur noch nicht.
+- Sprachrückfälle und Seitentitel sind in #9 erfasst; ein PDF-Beschriftungsfehler ist in #11 nachgestellt.
+- Alle 14 vorhandenen PDFs antworten mit HTTP 200 und PDF-Inhaltstyp; die zehn verknüpften Dateien aus den elf Anleitungsdatensätzen existieren. Inhaltliche Aktualität ist damit nicht bestätigt.
 - Die fünf JSON-Datensätze wurden gelesen; die FAQ enthalten 11 Einträge mit Frage und Antwort in allen fünf Sprachen.
-- Der Hauptkonfigurator wurde mit ausgewählten Preisfällen im Browser geprüft; ein Einstieg über Position Hold und ein Sprachwechsel DE → EN sind enthalten.
+- Der Hauptkonfigurator wurde mit acht Preisfällen und einem PDF-Abgleich im Browser geprüft; ein Einstieg über Position Hold und ein Sprachwechsel DE → EN sind enthalten.
 - Es erfolgte keine vollständige Browser-, Mobil-, Barrierefreiheits-, Rechts- oder Inhaltsabnahme aller Seiten.
 - Formulare wurden nicht abgesendet. Es wurden keine personenbezogenen Testdaten eingegeben.
 
@@ -69,7 +72,7 @@ Besonderheiten:
 
 - Kontakt verwendet in Deutsch einen Abschnitt der Startseite. Auch die anderen Kontakt-Routen verwenden die Startseitenkomponente; das genaue Scroll- und Formularverhalten bleibt zu prüfen.
 - /ch/, /fr-fr/, ältere englische Rechtsseiten und zusätzliche englische Routen sind im Bestand erfasst.
-  Ihre Existenz belegt noch keine funktionierende serverseitige Weiterleitung.
+  Die Browseraufrufe belegen clientseitige Navigation, keine serverseitigen HTTP-Weiterleitungen. 13 CH-Unterseiten mit abschließendem Schrägstrich landen fälschlich auf der Startseite (#8). Die 14 fr-fr-Einstiege führen zu den französischen Zielen; /en/functions/ und /en/dealer-finder/ ebenfalls zu den vorgesehenen aktuellen Zielen.
 - Position Hold wird separat ausgeliefert. Der geprüfte Kopf-Button zum Konfigurator führt zurück in den Hauptkonfigurator.
 - Italienisch ist keine Ziel-Sprache. Italien als Auslieferungsland im Konfigurator ist davon unabhängig.
 
@@ -78,10 +81,10 @@ Besonderheiten:
 | Bestandteil | Vorhandene Quelle | Status / Abnahme |
 |---|---|---|
 | FAQ | [faqs.json](../../dist/data/faqs.json), 11 Einträge | Sechs Schreibfehler sind in PR #4 korrigiert; fachliche Aussagen und Übersetzungen bleiben separat zu prüfen. |
-| Übersetzungen | [translation_DE.json](../../dist/data/translation_DE.json), 656 Datensätze; [translation_EN.json](../../dist/data/translation_EN.json), 279 Datensätze; weitere Texte in JavaScript | Datensatzanzahl ist kein Maß für Vollständigkeit. Sichtbare Texte und Rückfälle auf Deutsch pro Seite prüfen. |
+| Übersetzungen | [translation_DE.json](../../dist/data/translation_DE.json), 656 Datensätze; [translation_EN.json](../../dist/data/translation_EN.json), 279 Datensätze; weitere Texte in JavaScript | Datensatzanzahl ist kein Maß für Vollständigkeit. Deutsche Newsletter-Texte auf NL/ES und unvollständige Seitentitel bestätigt (#9); ältere Features-Seiten zeigen englischen Hauptinhalt. |
 | Händler | [dealers.json](../../dist/data/dealers.json), 9 Datensätze | Adressen, Auswahl, Karte und Ansprechpartner fachlich prüfen. |
-| Anleitungen | [anleitungen.json](../../dist/data/anleitungen.json), 11 Datensätze | Titel, Sprache, Zieldatei, Aktualität und Zugriffsart jeder Anleitung prüfen. |
-| Bilder und PDFs | Dateibestand CSV: 43 Bilddateien und 14 PDFs | Herkunft, Rechte, Aktualität, Darstellung und Einordnung öffentlich/geschützt offen. |
+| Anleitungen | [anleitungen.json](../../dist/data/anleitungen.json), 11 Datensätze | Zehn verknüpfte Dateien vorhanden und erreichbar. Titel, Sprache, Aktualität und gewünschte Zugriffsart jeder Anleitung fachlich prüfen. |
+| Bilder und PDFs | Dateibestand CSV: 43 Bilddateien und 14 PDFs | Alle 14 PDFs erreichbar; vorhandene Dateien tragen PDF-Kennung. Herkunft, Rechte, Aktualität, Darstellung und Einordnung öffentlich/geschützt offen. |
 | Modulzuordnung | [module-allocation.js](../../dist/assets/module-allocation.js) plus gebündelter Code | Aktuelle Regeln und ältere Kopie in positionhold.js fachlich abgleichen. |
 | Preise und Rabatte | Hauptbündel und positionhold.js | [Prüftabelle](konfigurator-prueftabelle.md); beobachtete Werte sind keine freigegebene Preisliste. |
 | Kontakt und Newsletter | Frontend plus [preview.js](../../dist/preview.js) | Vorschaumodus; Versand und Backend fehlen als betriebsfähiger Ablauf. |
@@ -90,7 +93,7 @@ Besonderheiten:
 | Alte API-Anbindung | PocketBase-Client und /hcgi/platform im Export | Serverimplementierung nicht enthalten; vorhandene Konten oder Dienste wurden nicht geprüft. |
 | Newsletter / Versand | Brevo als Arbeitsannahme | Im geprüften Code keine Anbindung nachgewiesen. |
 | Authentifizierung / Storage | Supabase als Kandidat | Im geprüften Code keine Anbindung nachgewiesen. |
-| Externe Ressourcen | Google Fonts in CSS; OpenStreetMap-Kacheln in Händlersuche | Netzwerk- und Datenschutzprüfung anhand der tatsächlich geladenen Ressourcen noch offen. |
+| Externe Ressourcen | Google Fonts in CSS; OpenStreetMap-Kacheln in Händlersuche; player.vimeo.com-Videoeinbettungen auf der Startseite im Browser beobachtet | Netzwerk- und Datenschutzprüfung anhand der tatsächlich geladenen Ressourcen noch offen. |
 | Analytics / Einwilligungen | Vorhandene Einwilligungsoberfläche; Analytics-Lader im Vorschaucode deaktiviert | Keine vollständige Prüfung aller Laufzeit-Anfragen erfolgt. |
 | Veröffentlichung | [stage-pages.yml](../../.github/workflows/stage-pages.yml) | staging wird auf GitHub Pages veröffentlicht. Keine automatische Produktivveröffentlichung aus main. |
 
@@ -99,7 +102,8 @@ Besonderheiten:
 Jede Aufgabe braucht eine verantwortliche Person, einen Beleg und ein überprüfbares Ergebnis.
 Neue Befunde bekommen eigene Issues; die Liste hier bleibt der Überblick.
 
-- [ ] Alle Hauptpfade und zusätzlichen Einstiege öffnen; richtige Seite und Sprache, direkte Aufrufe und Navigation vergleichen.
+- [x] Alle 116 Hauptpfade und zusätzlichen Einstiege direkt im Browser öffnen; ersten Seitenaufbau und Weiterleitungsziele erfassen. Befunde: #8 und #9.
+- [ ] Richtige Inhalte und Sprache vollständig abnehmen; direkte Aufrufe mit sämtlichen Navigationswegen vergleichen.
 - [ ] Kopf, Fuß, Kontaktanker, App-Links, interne Links und Weiterleitungen prüfen.
 - [ ] Inhalte in DE, EN, FR, NL und ES auf fehlende Texte, Rückfälle, Schreibweise und Konsistenz prüfen.
 - [ ] Mobile Bedienung, Tastaturbedienung, Fokus, Formularbeschriftungen und Fehlermeldungen prüfen.
@@ -119,7 +123,7 @@ Vorgesehene Reihenfolge:
 
 1. PR #2: Projektgrundlage und Team prüfen.
 2. PR #4: FAQ-Korrekturen prüfen.
-3. Diesen Bestands- und Prüfbericht prüfen.
+3. Diesen Bestands- und Prüfbericht sowie den Weiterleitungsfix PR #10 prüfen; offene Befunde #9 und #11 einplanen.
 4. Freigegebene PRs nach staging übernehmen und die aktualisierte Vorschau nachprüfen.
 5. Den dadurch entstandenen exakten Staging-Commit im bestehenden Import-PR #1 nach main prüfen und freigeben.
 6. Backend, CMS-Bedarf und Hosting auf dieser gemeinsamen Grundlage entscheiden und in kleinen PRs umsetzen.
@@ -128,5 +132,7 @@ Vor weiteren größeren Codeänderungen ist das ursprüngliche bearbeitbare Quel
 oder ein bewusster Weg zu reproduzierbarem Quellcode festzulegen. Das aktuelle Repository enthält
 einen Export ohne ursprüngliche Komponenten und Build-Konfiguration.
 
-Gemeinsame Arbeitsregeln, geeignete PR-Prüfungen und Branchschutz gehören zur nächsten
-Repository-Einrichtung. Konto- und Schutzregeln sind durch diesen Bericht nicht eingerichtet.
+Gemeinsame Arbeitsregeln und Branchschutz gehören zur nächsten Repository-Einrichtung.
+PR #10 ergänzt die erste automatische Syntax- und Weiterleitungsprüfung; der Lauf auf seinem
+Commit fe9fcfa ist erfolgreich (GitHub-Actions-Lauf 39596425055).
+Konto- und Schutzregeln sind durch diesen Bericht nicht eingerichtet.
