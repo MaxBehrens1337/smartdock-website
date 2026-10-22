@@ -63,3 +63,24 @@ DE/EN-Sprachwechsel und Menüs mobil geprüft, 375 px ohne horizontalen Überlau
 Der neue Händlerkopf ist eine statische Umsetzung nach dem bestehenden Header;
 er lädt keine zweite React-Anwendung. Startseite und vorhandene Unterseiten
 wurden nicht umgestaltet.
+
+## Gemeinsame Navigation statt statischem Nachbau
+
+Ausgangsstand für die Korrektur: staging `bbaaeb870a90d80daf672bbef0fe31863b3f58d3`.
+Der Händlerbereich verwendet jetzt die vorhandene React-Seitenhülle und damit
+exakt dieselbe `gH`-Headerkomponente sowie den Footer wie die Startseite.
+Die fünf Händlerpfade sind eigene Routen der Anwendung. Die Inhaltserzeugung ist
+als explizite Mount-Funktion gekapselt; Händler-CSS ist vollständig auf
+`.sd-dealer-portal` begrenzt. Der separate statische Header samt eigener
+Menü-/Sprachlogik wurde entfernt. Sprachwechsel erhält den Händlerpfad.
+
+Lokaler Desktopvergleich im Pages-Build: Position, Breite, Höhe sowie Vorder- und
+Hintergrundfarben sämtlicher Headerbuttons und des Logos sind beim Wechsel
+Händlerbereich → Startseite identisch. Wechsel erfolgt auch innerhalb derselben
+Anwendung; die geladene Händler-CSS verändert die Startseite nicht.
+Mobil bei 375 × 812 sind ebenfalls sämtliche Headermaße zwischen EN-Startseite
+und EN-Händlerbereich identisch; genau ein Header und kein horizontaler Überlauf.
+Originales Mobilmenü → Händlerbereich, Logo → Startseite und DE→EN-Sprachwechsel
+innerhalb des Händlerbereichs geprüft. Root-Einstieg auf Port 4173 und Pages-Einstieg
+auf Port 4174 erfolgreich. Neue Regression prüft beide Buildvarianten und alle
+fünf Sprachziele. Gesamtprüfung: 64 Tests, beide Builds, 60 Redirectfälle erfolgreich.
