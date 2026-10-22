@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
+import { escapePdfText } from '../src/pdf-pagination.js';
 
 const bundles = [
   { file: 'index-RRVGC1mK.js', start: 'f5={summary_inquiry:', end: ',R$=', hook: 'U$', moneyStart: 'Ui=e=>', moneyEnd: ',V0=', money: 'Wa', react: 'j', canvas: 'tF', pdf: 'Gt', languages: ['DE', 'EN', 'FR', 'NL', 'ES'], args: language => [language] },
@@ -29,13 +30,17 @@ function section(source, start, end) {
 async function renderTemplate(bundle, source, language, fixture) {
   const input = {
     priceData: { ...fixture, configurationPrices: [{ name: 'ACU', price: fixture.subtotal }] },
-    configData: {}, contactData: {}, selectedCountry: fixture.country,
+    configData: {}, contactData: fixture.contactData || {}, selectedCountry: fixture.country,
     installationService: fixture.installation,
   };
   const original = structuredClone(input);
   let html = '', saved = '';
   const context = {
     Bs: () => input,
+    sdEscapePdfText: escapePdfText,
+    // Diese Tests prüfen die echte Vorlage. Seitenplanung/Rasterausschnitte
+    // werden separat und zusätzlich mit echten Browser-Downloads geprüft.
+    sdSavePaginatedPdf: async (element, render, pdf, filename) => { await render(element); pdf.save(filename); },
     [bundle.react]: { useState: () => [false, () => {}] },
     document: { createElement: () => ({ style: {}, innerHTML: '' }), body: { appendChild() {}, removeChild() {} } },
     [bundle.canvas]: async element => {
@@ -65,6 +70,17 @@ async function renderTemplate(bundle, source, language, fixture) {
 const escape = value => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 for (const bundle of bundles) {
+  test('PDF-Vorlage ' + bundle.file + ': Kontaktangaben können kein HTML einschleusen', async () => {
+    const source = await readFile(new URL('../vendor/website/assets/' + bundle.file, import.meta.url), 'utf8');
+    const { html } = await renderTemplate(bundle, source, 'DE', { ...cases[0], contactData: {
+      firstName: 'TESTDATEN <Nord>', lastName: 'Süd & West', company: '<script>test</script>',
+      email: 'test@example.invalid', phone: '<Test>', street: '<Straße>', city: '<Stadt>', country: '<Land>',
+    } });
+    for (const literal of ['<Nord>', '<script>test</script>', '<Test>', '<Straße>', '<Stadt>', '<Land>']) {
+      assert.ok(!html.includes(literal));
+      assert.ok(html.includes(escapePdfText(literal)));
+    }
+  });
   test('PDF-Vorlage ' + bundle.file + ': Zwischensumme und Beträge', async t => {
     const source = await readFile(new URL('../vendor/website/assets/' + bundle.file, import.meta.url), 'utf8');
     for (const language of bundle.languages) for (const fixture of cases) {
@@ -74,6 +90,8 @@ for (const bundle of bundles) {
         assert.ok(!/<span>Netto<\/span>/.test(html), 'Brutto-Zwischensumme darf nicht Netto heißen');
         assert.ok(new RegExp('<span[^>]*>' + escape(totalLabels[language]) + '</span>\\s*<span[^>]*>' + escape(format(fixture.totalPrice)) + '</span>').test(html), 'Gesamtbetrag muss unverändert in der Gesamtzeile ausgegeben werden');
         assert.ok(html.includes('(' + fixture.vat + '%)'), 'Steuersatz aus der Eingabe muss erhalten bleiben');
+        assert.equal((html.match(/data-pdf-totals/g) || []).length, 1, 'Summenblock braucht eine Umbruchgrenze');
+        assert.equal((html.match(/data-pdf-footer/g) || []).length, 1, 'Footer gehört zur letzten Summenseite');
         if (fixture.bundleDiscount < 0) assert.ok(html.includes(format(fixture.bundleDiscount)), 'Rabatt muss erhalten bleiben');
       });
     }

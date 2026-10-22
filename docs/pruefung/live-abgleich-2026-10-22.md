@@ -1,5 +1,9 @@
 # Abgleich mit smartdock.de vom 22.10.2026
 
+Nachfolgende Korrekturen und erweiterte Prüfungen zu Motorwechseln und PDF-
+Seitenumbrüchen sind im [ergänzenden Bericht](pdf-seitenumbruch-und-wechsel-2026-10-22.md)
+dokumentiert. Die nachstehenden Angaben bleiben der Nachweis des ursprünglichen Abgleichs.
+
 ## Ergebnis und Geltungsbereich
 
 Ausgangspunkt: `main` **4fbb5251aa9a9e89048db2f3d339be77f52b3255**.
