@@ -57,3 +57,47 @@ test('Wiederholte Builds sind ohne Uhrzeit, Netzwerk oder Zufallswerte identisch
     for (const [name, bytes] of first) assert.deepEqual(second.get(name), bytes, name);
   }
 });
+
+test('Dynamische Pages-Links sind schon vor dem Klick für neue Tabs korrekt', () => {
+  const html = adaptForBase('<html><head></head></html>', 'index.html', PAGES_BASE);
+  let observer;
+  const context = { URL, window: {}, location: { href: 'https://example.com/smartdock-website/', origin: 'https://example.com' },
+    document: { addEventListener() {}, documentElement: {} },
+    MutationObserver: class { constructor(callback) { observer = callback; } observe() {} },
+  };
+  for (const [, script] of html.matchAll(/<script>([\s\S]*?)<\/script>/g)) vm.runInNewContext(script, context);
+  const anchor = href => ({ nodeType: 1, href, matches: () => true, querySelectorAll: () => [],
+    getAttribute() { return this.href; }, setAttribute(_, value) { this.href = value; } });
+  for (const [input, expected] of [
+    ['/faq', '/smartdock-website/faq'], ['/positionhold', '/smartdock-website/positionhold'],
+    ['https://example.com/en/faq?q=1#answer', '/smartdock-website/en/faq?q=1#answer'],
+    ['/smartdock-website/faq', '/smartdock-website/faq'],
+    ['https://other.example/faq', 'https://other.example/faq'], ['#download-app', '#download-app'],
+  ]) {
+    const element = anchor(input);
+    observer([{ type: 'childList', addedNodes: [element] }]);
+    assert.equal(element.href, expected);
+    observer([{ type: 'attributes', target: element }]);
+    assert.equal(element.href, expected);
+  }
+});
+
+test('Lokale Konfigurationsvorschau speichert wie Pages nur im aktuellen Tab', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const source = await readFile(new URL('../src/preview.js', import.meta.url), 'utf8');
+  for (const hostname of ['127.0.0.1', 'localhost', 'thitronik.github.io']) {
+    let saved; let network = 0;
+    const context = { URL, Request, Response, crypto: { randomUUID: () => 'test-id' },
+      location: { hostname, href: 'http://' + hostname + '/' },
+      sessionStorage: { setItem: (key, value) => { saved = { key, value: JSON.parse(value) }; } },
+      window: { fetch: async () => { network++; throw Error('Unerwarteter Netzwerkzugriff'); } },
+    };
+    vm.runInNewContext(source, context);
+    const response = await context.window.fetch('/hcgi/platform/api/collections/configuration_requests/records',
+      { method: 'POST', body: JSON.stringify({ firstName: 'Test', email: 'test@example.invalid' }) });
+    assert.equal(response.status, 200);
+    assert.equal(network, 0);
+    assert.equal(saved.value.preview, true);
+    assert.equal(saved.key, 'smartdock-last-test-configuration');
+  }
+});

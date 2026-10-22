@@ -9,10 +9,7 @@
     const method = (init.method || (input instanceof Request ? input.method : 'GET')).toUpperCase();
     if (method !== 'GET') {
       if (match[1] === 'configuration_requests') {
-        if (['localhost','127.0.0.1','[::1]'].includes(location.hostname)) {
-          return originalFetch('/api/test-configurations', {...init, method: 'POST'});
-        }
-        // Shared demo: keep test submissions in this visitor's tab only.
+        // Lokal und auf Pages gleich: kein nicht vorhandenes Test-Backend aufrufen.
         try {
           const body = JSON.parse(init.body || '{}');
           const record = {...body, id: 'test-' + crypto.randomUUID(), preview: true, created: new Date().toISOString()};
