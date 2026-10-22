@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { build, ROOT } from './build.mjs';
 
-execFileSync(process.execPath, ['--test', 'tools/build.test.mjs'], { cwd: ROOT, stdio: 'inherit' });
+execFileSync(process.execPath, ['tools/check-repository.mjs'], { cwd: ROOT, stdio: 'inherit' });
+execFileSync(process.execPath, ['--test', 'tools/build.test.mjs', 'tools/repository.test.mjs'], { cwd: ROOT, stdio: 'inherit' });
 for (const pages of [false, true]) {
   const files = await build({ pages });
   let scripts = 0;

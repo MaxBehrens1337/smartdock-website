@@ -1,0 +1,23 @@
+name: Entscheidung vorbereiten
+description: Bedarf und Empfehlung für Architektur, CMS, Backend oder Hosting erarbeiten.
+body:
+  - type: textarea
+    id: bedarf
+    attributes:
+      label: Welche Frage müssen wir beantworten?
+      description: Nutzerablauf oder Betriebsbedarf; vorhandene Entscheidungs-ID E01–E07 nennen, falls passend.
+    validations:
+      required: true
+  - type: textarea
+    id: grundlage
+    attributes:
+      label: Was ist bekannt, was fehlt?
+      description: Anforderungen und Einschränkungen. Vertrauliche Verträge oder Zugangswerte nicht hier ablegen.
+    validations:
+      required: true
+  - type: textarea
+    id: nachweis
+    attributes:
+      label: Welche Entscheidungsvorlage brauchen wir?
+      description: Das bearbeitende Werkzeug ergänzt eine begründete Empfehlung, Alternativen, Kosten mit Quelle/Datum, Pflegeaufwand und einen überprüfbaren Versuch.
+      placeholder: "- [ ] Empfehlung und Alternativen anhand derselben Kriterien verglichen.\n- [ ] Offene Annahmen und Folgen benannt.\n- [ ] Entscheidung und zuständige Person nachvollziehbar dokumentiert."

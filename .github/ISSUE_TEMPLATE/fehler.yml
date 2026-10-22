@@ -1,0 +1,29 @@
+name: Fehler melden
+description: Einen beobachteten Fehler nachvollziehbar festhalten.
+body:
+  - type: input
+    id: ort
+    attributes:
+      label: Seite und Sprache
+      placeholder: "URL, Sprache, gegebenenfalls Vorschau-Commit"
+    validations:
+      required: true
+  - type: textarea
+    id: schritte
+    attributes:
+      label: Wie lässt sich der Fehler auslösen?
+      description: Schritte, Eingaben und Gerät/Browser. Keine echten Kundendaten verwenden.
+    validations:
+      required: true
+  - type: textarea
+    id: ergebnis
+    attributes:
+      label: Beobachtet und erwartet
+      description: Beide Ergebnisse unterscheiden. Bei Preisen oder Produktaussagen die Quelle für den erwarteten Wert nennen.
+    validations:
+      required: true
+  - type: textarea
+    id: belege
+    attributes:
+      label: Belege und Auswirkungen
+      description: Optional Screenshot ohne persönliche Daten, betroffene Fälle oder ein vorhandenes Issue.

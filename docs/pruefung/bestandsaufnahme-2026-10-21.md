@@ -1,14 +1,14 @@
 # SMARTDOCK: Bestandsaufnahme und Weg zu main
 
 Stand: 21. Oktober 2026. Grundlage ist [staging d74e084](https://github.com/Thitronik/smartdock-website/commit/d74e08402bc2c4d480296ec1e494c0f25ded2eaf).
-Dies ist eine datierte Bestandsaufnahme. Die Bestandszahlen und CSV-Dateien beziehen sich weiterhin auf den ursprünglichen Export. Der neue [Build und Migrationsplan](../migration/aufbau.md) führt die vorbereiteten PRs zusammen; Quellenlinks unten verweisen auf die neuen Ablageorte.
+Dies ist eine datierte Bestandsaufnahme. Die Bestandszahlen und CSV-Dateien beziehen sich weiterhin auf den ursprünglichen Export. Der [Build und Migrationsplan](../migration/aufbau.md) beschreibt den inzwischen übernommenen Aufbau; Quellenlinks unten verweisen auf die neuen Ablageorte. Die nachfolgende Liste beschreibt den damaligen Prüfstand. Spätere Korrekturen und die erfolgreiche Main-Übernahme stehen im [Veröffentlichungsnachweis](../betrieb/vorschau.md).
 
 Team: **Marlene, Adrian, Sönke und Max**. Zuständigkeiten und GitHub-Benutzernamen werden noch zugeordnet.
 
 Aufgaben: [Gesamtabnahme #6](https://github.com/Thitronik/smartdock-website/issues/6),
 [FAQ #3](https://github.com/Thitronik/smartdock-website/issues/3),
 [Konfigurator #5](https://github.com/Thitronik/smartdock-website/issues/5).
-Die [Projektgrundlage #2](https://github.com/Thitronik/smartdock-website/pull/2) bleibt der zentrale Einstieg für Ziele und Entscheidungen.
+Die aktuelle [Projektübersicht](../projektuebersicht.md) ist der Einstieg für Ziele und Umfang.
 
 ## Prüfstand
 
