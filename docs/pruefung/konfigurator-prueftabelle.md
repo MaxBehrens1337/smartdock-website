@@ -28,6 +28,12 @@ K01/K02/K06–K08 wurden in einem Ablauf geprüft; K03–K05 in einem zweiten Ta
 K01–K08 beziehen sich auf die sichtbare Zusammenfassung. K17a vergleicht zusätzlich das heruntergeladene PDF; dessen gesamte Seite wurde gerendert und visuell geprüft. Keine Anfrage wurde versendet. Das PDF enthält keinen extrahierbaren Text und ist als Bild aufgebaut; die barrierefreie Nutzbarkeit bleibt zu prüfen.
 Die Fälle ohne vollständig gewählten Hersteller belegen nur die dort angezeigte Zwischenberechnung.
 
+Nachtrag vom 22.10.2026: Die [PDF-Prüfung zur Beschriftungskorrektur](pdf-zwischensumme-2026-10-22.md)
+vergleicht acht echte Downloads in fünf Sprachen sowie Einbau, Rabatt und Schweiz.
+Die „Netto“-Beschriftung ist im dort geprüften lokalen Änderungsstand korrigiert;
+Übernahme und veröffentlichte Nachprüfung stehen in #11. Neue Befunde: veraltete
+Motorangaben nach Abwahl (#17) und ein getrennter PDF-Summenblock (#18).
+
 ## Codebefund hinter den Preisunterschieden
 
 Quellen: [Hauptbündel](../../vendor/website/assets/index-RRVGC1mK.js),
@@ -61,10 +67,10 @@ Ein aus dem bestehenden Code abgelesener Betrag darf nicht allein zum fachlichen
 | K14 | Einbau ein / aus in Euro und Schweiz | Servicepreis und Rabattanwendung entsprechen der bestätigten Regel | Offen |
 | K15 | Bündelrabatt: hinzufügen, entfernen, Länderwechsel | Rabatt erscheint ausschließlich in den freigegebenen Fällen | Teilweise: K07/K08 |
 | K16 | Aktionscode gültig / ungültig / Schreibweise / Gültigkeitszeitraum | Anwendung und Kombination mit Einbau/Bündelrabatt entsprechen einer bestätigten Aktion | Fachliche Vorgaben offen |
-| K17 | Bildschirm und heruntergeladenes PDF | Stückliste, Mengen, Währung, Einzelpreise, Rabatte und Summe stimmen überein | K17a: einfache DE-Auswahl geprüft; Beschriftungsfehler #11. Weitere Länder/Einbau/Rabatte offen |
+| K17 | Bildschirm und heruntergeladenes PDF | Stückliste, Mengen, Währung, Einzelpreise, Rabatte und Summe stimmen überein | K17a sowie [acht lokale Downloads vom 22.10.](pdf-zwischensumme-2026-10-22.md); #11 korrigiert im PR-Stand, #17/#18 offen; weitere Kombinationen und veröffentlichte Nachprüfung offen |
 | K18 | Späterer Anfrage-Datensatz und Backend | Backend berechnet aus freigegebenen Regeln; manipulierte Browserwerte werden nicht als verbindliche Preise übernommen | Backend noch offen |
 | K19 | Ungültige Auswahl und Berechnungsfehler | Verständlicher Fehlerzustand; kein scheinbar gültiges Null-Euro-Angebot | Offen |
-| K20 | Zurücknavigation, Zurücksetzen und erneute Auswahl | Keine veralteten Module, Rabatte oder Summen bleiben stehen | Teilweise: K08 |
+| K20 | Zurücknavigation, Zurücksetzen und erneute Auswahl | Keine veralteten Module, Rabatte oder Summen bleiben stehen | K08; veraltete Motorangaben am 22.10. bestätigt, siehe #17 |
 | K21 | Weitere Einstiege und Sprachfassungen von Position Hold | Gleiche Eingabe führt zum gleichen aktuellen Konfiguratorergebnis | Teilweise: K03 |
 
 ## Vorlage für weitere Fälle

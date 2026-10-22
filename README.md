@@ -14,11 +14,13 @@ Die Website ist weiterhin eine Testvorschau mit offenen fachlichen Prüfungen.
 | Ich möchte … | Einstieg |
 |---|---|
 | die Website ansehen | [Staging-Vorschau](https://thitronik.github.io/smartdock-website/) |
+| erstmals mit Codex oder Claude Code mitarbeiten | [Teameinstieg mit kopierbarem Startauftrag](docs/arbeitsweise/teameinstieg.md) |
 | verstehen, was wir bauen | [Projektübersicht](docs/projektuebersicht.md) |
 | etwas ändern oder mit KI bearbeiten | [Zusammenarbeit](CONTRIBUTING.md) und [AI-First-Arbeitsweise](docs/arbeitsweise/ai-first.md) |
 | einen Fehler oder Auftrag erfassen | [GitHub-Aufgabe anlegen](https://github.com/Thitronik/smartdock-website/issues/new/choose) |
 | die nächste Arbeit auswählen | [Offene Aufgaben](https://github.com/Thitronik/smartdock-website/issues) |
 | eine technische Entscheidung nachvollziehen | [Entscheidungsübersicht](docs/entscheidungen/README.md) |
+| den Umzug vorbereiten | [Startplan #20](https://github.com/Thitronik/smartdock-website/issues/20) und [benötigte Infos für Hetzner/Brevo](docs/betrieb/zugaenge-und-start.md) |
 | etwas im Repository finden | [Dokumentations- und Quellenübersicht](docs/README.md) |
 
 ## Lokal starten
