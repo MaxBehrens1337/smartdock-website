@@ -20,7 +20,7 @@ for (const pages of [false, true]) {
       assert.ok(!html.includes('{{'), 'Unersetzter Platzhalter: ' + name);
       for (const [, url] of html.matchAll(/(?:src|href)="(\/[^"#?]+)"/g)) {
         const target = url.replace(pages ? /^\/smartdock-website\// : /^\//, '');
-        assert.ok(files.has(target), name + ' verweist auf fehlende Datei ' + url);
+        assert.ok(files.has(target) || ((target === '' || target.endsWith('/')) && files.has(target + 'index.html')), name + ' verweist auf fehlende Datei ' + url);
       }
     }
   }

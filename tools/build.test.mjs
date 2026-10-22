@@ -35,8 +35,8 @@ test('Navigation unter Pages verdoppelt den Präfix nicht und verändert keine f
 test('Der Build erzeugt beide Anwendungen, fünf Sprach-Einstiege und alle historischen Seiten', async () => {
   const root = await createOutput();
   const pages = await createOutput(PAGES_BASE);
-  assert.equal([...root.keys()].filter(name => name.endsWith('.html')).length, 116);
-  assert.equal(root.size, 187);
+  assert.equal([...root.keys()].filter(name => name.endsWith('.html')).length, 121);
+  assert.equal(root.size, 201);
   assert.equal(pages.size, root.size + 1);
   for (const language of ['', 'en/', 'fr/', 'nl/', 'es/']) {
     assert.ok(root.has(language + 'index.html'));
@@ -101,3 +101,20 @@ test('Lokale Konfigurationsvorschau speichert wie Pages nur im aktuellen Tab', a
     assert.equal(saved.key, 'smartdock-last-test-configuration');
   }
 });
+
+ test('Händlerseiten bleiben ohne Backend und enthalten keine geschützten Inhalte', async () => {
+ const files = await createOutput(PAGES_BASE);
+ for (const lang of ['', 'en/', 'fr/', 'nl/', 'es/']) {
+ const html = files.get(lang+'haendlerbereich/index.html').toString();
+ assert.ok(html.includes('/smartdock-website/assets/dealer-portal.js'));
+ assert.ok(html.includes('noindex,nofollow'));
+ }
+ const js = files.get('assets/dealer-portal.js').toString();
+ assert.ok(!/fetch\(|localStorage|sessionStorage/.test(js));
+ const {dealerLink} = await import('../src/dealer-link.js');
+ for (const lang of ['DE','EN','FR','NL','ES']) {
+ const link = dealerLink(lang);
+ assert.ok(files.has(link.href.slice(1)+'index.html'));
+ assert.ok(link.children);
+ }
+ });
