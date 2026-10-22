@@ -98,6 +98,9 @@ export async function createOutput(base = '') {
     if (!Array.isArray(parsed.items)) throw new Error('Datensatz ohne items: ' + name);
     add('data/' + name, bytes);
   }
+  for (const name of ['dealer-link.js', 'dealer-portal.js', 'dealer-portal.css']) add('assets/' + name, await readFile(path.join(ROOT, 'src', name)));
+  const dealerShell = await readFile(path.join(ROOT, 'src/dealer-portal.html'), 'utf8');
+  for (const lang of ['de', 'en', 'fr', 'nl', 'es']) add((lang === 'de' ? '' : lang + '/') + 'haendlerbereich/index.html', dealerShell.replaceAll('%%LANG%%', lang));
   add('preview.js', await readFile(path.join(ROOT, 'src/preview.js')));
   add('assets/module-allocation.js', await readFile(path.join(ROOT, 'src/module-allocation.js')));
   add('assets/pdf-pagination.js', await readFile(path.join(ROOT, 'src/pdf-pagination.js')));
