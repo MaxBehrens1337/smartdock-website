@@ -106,7 +106,7 @@ test('Lokale Konfigurationsvorschau speichert wie Pages nur im aktuellen Tab', a
  const files = await createOutput(PAGES_BASE);
  for (const lang of ['', 'en/', 'fr/', 'nl/', 'es/']) {
  const html = files.get(lang+'haendlerbereich/index.html').toString();
- assert.ok(html.includes('/smartdock-website/assets/dealer-portal.js'));
+ assert.ok(html.includes('/smartdock-website/assets/index-RRVGC1mK.js'));
  assert.ok(html.includes('noindex,nofollow'));
  }
  const js = files.get('assets/dealer-portal.js').toString();
@@ -118,3 +118,23 @@ test('Lokale Konfigurationsvorschau speichert wie Pages nur im aktuellen Tab', a
  assert.ok(link.children);
  }
  });
+
+test('Händler-Sprachwechsel erhält die Seite und nutzt dieselbe Anwendung wie die Startseite', async () => {
+  for (const base of ['', PAGES_BASE]) {
+    const files = await createOutput(base);
+    const bundle = files.get('assets/index-RRVGC1mK.js').toString();
+    const source = bundle.match(/function JQ\(e,t\)\{[\s\S]*?(?=function Ek\()/)?.[0];
+    assert.ok(source, 'Sprachrouting fehlt');
+    const { dealerLink } = await import('../src/dealer-link.js');
+    const translate = vm.runInNewContext('(' + source + ')', {sdDealerLink:dealerLink});
+    for (const lang of ['DE', 'EN', 'FR', 'NL', 'ES']) {
+      for (const current of ['/haendlerbereich', '/en/haendlerbereich/']) {
+        assert.equal(translate(current, lang), dealerLink(lang).href);
+      }
+      const page = files.get((lang === 'DE' ? '' : lang.toLowerCase() + '/') + 'haendlerbereich/index.html').toString();
+      assert.ok(page.includes('src="' + base + '/assets/index-RRVGC1mK.js"'));
+      assert.ok(page.includes('id="root"'));
+      assert.ok(!page.includes('<header'), 'Keine zweite Headerimplementierung');
+    }
+  }
+});
