@@ -18,6 +18,7 @@
 | Aktueller Vergleich mit smartdock.de, behobene Abweichungen und Prüfgrenzen | [Live-Abgleich vom 22.10.2026](pruefung/live-abgleich-2026-10-22.md) |
 | Beobachtete Preisfälle und offene Prüfungen | [Konfigurator-Prüftabelle](pruefung/konfigurator-prueftabelle.md) |
 | PDF-Beschriftung, Downloads und Regression | [PDF-Prüfung vom 22.10.2026](pruefung/pdf-zwischensumme-2026-10-22.md) |
+| PDF-Seitenumbrüche und Motor-/Hersteller-/Länderwechsel | [Ergänzende Prüfung vom 22.10.2026](pruefung/pdf-seitenumbruch-und-wechsel-2026-10-22.md) |
 
 Historische CSV-Dateien bleiben datiert und unverändert. Aktuelle Arbeit wird in
 Issues gepflegt, statt dieselbe Aufgabenliste in mehreren Dokumenten zu führen.
@@ -31,7 +32,7 @@ Issues gepflegt, statt dieselbe Aufgabenliste in mehreren Dokumenten zu führen.
 | Übersetzungen | [content/](../content/) und [Sprachbefund #9](https://github.com/Thitronik/smartdock-website/issues/9) | Viele Texte liegen noch in den Anwendungspaketen; JSON ist keine vollständige Textquelle |
 | HTML / URL-Einstiege | [src/page.html](../src/page.html), [src/routes.json](../src/routes.json), [src/apps.json](../src/apps.json) | React-Innenseiten liegen noch im Bündel; ein neuer HTML-Einstieg allein erzeugt keine neue Seite |
 | Vorschau-Formulare | [src/preview.js](../src/preview.js) | Lokale Vorschau, kein produktiver Versand |
-| Modulregeln / Preise / PDF | [src/module-allocation.js](../src/module-allocation.js), [Prüftabelle](pruefung/konfigurator-prueftabelle.md) | Weitere Regeln liegen im Bündel; fachliche Preisquelle bleibt offen |
+| Modulregeln / Preise / PDF | [src/module-allocation.js](../src/module-allocation.js), [src/pdf-pagination.js](../src/pdf-pagination.js), [Prüftabelle](pruefung/konfigurator-prueftabelle.md) | Weitere Regeln liegen im Bündel; fachliche Preisquelle bleibt offen |
 | Bilder und PDFs | [public/](../public/) | Originalmedien erhalten; URLs und Herkunft berücksichtigen |
 | Übernommene React-/CSS-Pakete | [vendor/website/](../vendor/website/) | Noch kompiliert; gezielte Änderungen mit Regression, schrittweiser Ersatz |
 | Build / Tests / Vorschau-Server | [tools/](../tools/), [package.json](../package.json) | Root und Pages prüfen; nur erlaubte Website-Quellen veröffentlichen |
