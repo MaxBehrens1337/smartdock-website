@@ -12,6 +12,7 @@ Bei Preisen, Produktangaben oder Rechtstexten die fachliche Grundlage nennen.
 
 - [ ] `npm run check` erfolgreich.
 - [ ] Betroffene Abläufe und Sprachfassungen geprüft; bei Build-/Pfadänderungen auch Root und Pages.
+- [ ] Bei Oberfläche/Funktionen: Ausgangs-Commit und Vorher-/Nachher-Belege für Desktop/Mobil genannt; Design und Umfang erhalten, gewollte Fehlerkorrekturen erklärt. Bei reiner Dokumentation als nicht betroffen kennzeichnen.
 - [ ] Prüfergebnisse mit betroffenen Fällen, Sprachen und Grenzen unten genannt.
 - [ ] Benötigte Dokumentation und das zugehörige Issue sind aktuell.
 

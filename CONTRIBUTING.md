@@ -3,6 +3,7 @@
 Die verbindlichen Regeln für Menschen, Codex und Claude Code stehen in
 [AGENTS.md](AGENTS.md). Die [AI-First-Anleitung](docs/arbeitsweise/ai-first.md)
 zeigt, wie aus einer Idee ein prüfbarer Auftrag wird.
+Wer neu einsteigt, beginnt mit dem [Teameinstieg](docs/arbeitsweise/teameinstieg.md).
 
 ## Vom Auftrag zur Änderung
 
@@ -56,7 +57,7 @@ nicht automatisch. Mit `Strg+C` stoppen.
 | FAQ / Inhalte | Betroffene Texte und Sprachfassungen im Browser lesen |
 | URLs / Build / Navigation | Root und Pages, direkte URLs, Query/Hash und Navigation prüfen |
 | Konfigurator / Preise / PDF | Fachliche Quelle und Fälle aus der [Prüftabelle](docs/pruefung/konfigurator-prueftabelle.md) abgleichen |
-| Sichtbare Oberfläche | Betroffene Desktop-/Mobilansichten und Tastaturbedienung prüfen |
+| Sichtbare Oberfläche | Ausgangs-Commit und Vorher-/Nachher-Ansichten für Desktop/Mobil festhalten; Abläufe und Tastaturbedienung vergleichen, gewollte Fehlerkorrekturen benennen |
 
 ## Übergabe
 
