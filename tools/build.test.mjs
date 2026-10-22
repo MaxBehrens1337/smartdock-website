@@ -138,3 +138,24 @@ test('Händler-Sprachwechsel erhält die Seite und nutzt dieselbe Anwendung wie 
     }
   }
 });
+
+test('Cookie-Auswahl zeigt gleichwertige Buttons mit getrennten Einwilligungsaktionen', async () => {
+ const files = await createOutput();
+ for (const name of ['index-RRVGC1mK.js','positionhold.js']) {
+  const source=files.get('assets/'+name).toString();
+  const at=source.lastIndexOf('children:e("cookie_accept_necessary")');
+  const start=source.lastIndexOf('children:[',at)+'children:'.length;
+  const end=source.indexOf(']})',at)+1;
+  const jsx=(_type,props)=>props;
+  const all=Object.assign(()=> 'all',{jsx});
+  const buttons=vm.runInNewContext(source.slice(start,end),{r:{jsx},s:all,o:()=> 'necessary',i:()=> 'all',vt:null,Tt:null,e:key=>key});
+  assert.equal(buttons.length,2);
+  const visual=button=>JSON.stringify({variant:button.variant,className:button.className,style:button.style});
+  assert.equal(visual(buttons[0]),visual(buttons[1]),name);
+  assert.equal(buttons[0].style.background,'transparent');
+  assert.equal(buttons[0].style.color,'hsl(var(--foreground))');
+  assert.equal(buttons[0].style.boxShadow,'none');
+  assert.equal(buttons[0].onClick(),'necessary');
+  assert.equal(buttons[1].onClick(),'all');
+ }
+});
