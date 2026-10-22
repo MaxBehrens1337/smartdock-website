@@ -1,6 +1,7 @@
-/** Allocate physical CUs from selected functions. Never reuse prior allocation.
- * Confirmed priority: thrusters, anchors, winches, horn. ECU stays independent.
- * Proportional thrusters retain the existing dedicated TCU (no separate TCU-P SKU).
+/** Modulzuordnung wie auf smartdock.de, abgeglichen am 22.10.2026.
+ * Ein einzelnes nicht proportionales Strahlruder teilt eine ACU mit einem Extra.
+ * Alle übrigen Extras belegen paarweise WCUs. ECU bleibt unabhängig.
+ * Dies dokumentiert Live-Verhalten, keine eigenständige fachliche Freigabe.
  */
 export function allocateModules({engine=null,thrusters=[],anchors=0,winches=0,horn=false,proportional=false}) {
   for (const [name,value] of Object.entries({anchors,winches})) {
@@ -15,14 +16,10 @@ export function allocateModules({engine=null,thrusters=[],anchors=0,winches=0,ho
   }
   const thrust=['bow','stern'].filter(x=>thrusters.includes(x));
   const extra=[...Array.from({length:anchors},(_,i)=>`anchor${i+1}`),...Array.from({length:winches},(_,i)=>`winch${i+1}`),...(horn?['horn']:[])];
-  let mixed=false;
   if(thrust.length) {
     if(proportional||thrust.length===2||extra.length===0) add('TCU',thrust);
-    else {add('ACU',[thrust[0],extra.shift()]);mixed=true;}
+    else add('ACU',[thrust[0],extra.shift()]);
   }
-  // Without a mixed ACU, start anchor functions on an ACU. Its second channel
-  // can also carry a winch/horn. Remaining functions share two-channel WCUs.
-  if(!mixed&&extra[0]?.startsWith('anchor'))add('ACU',extra.splice(0,2));
   while(extra.length)add('WCU',extra.splice(0,2));
   return modules;
 }

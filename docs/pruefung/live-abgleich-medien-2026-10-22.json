@@ -1,0 +1,847 @@
+{
+  "date": "2026-10-22",
+  "mainBundle": {
+    "url": "https://www.smartdock.de/assets/index-RRVGC1mK.js",
+    "sha256": "61377d3696f70470ff82aab05f82168ae7c108e0c36c95982652f5c62e61d0a7"
+  },
+  "media": [
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/db32cac9a31619468d321af737c640a2.png",
+      "status": 200,
+      "bytes": 49730,
+      "sha256": "10a590ae32e6c87d0dbc0ed39eba4e11bf502c68cdc9abef0d02c13c14eaa382",
+      "local": [
+        {
+          "path": "public/media/db32cac9a31619468d321af737c640a2.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/d09865b04744f74ee9df04dab73d32ef.png",
+      "status": 200,
+      "bytes": 49730,
+      "sha256": "10a590ae32e6c87d0dbc0ed39eba4e11bf502c68cdc9abef0d02c13c14eaa382",
+      "local": [
+        {
+          "path": "public/media/d09865b04744f74ee9df04dab73d32ef.png",
+          "equal": true
+        },
+        {
+          "path": "public/media/positionhold/d09865b04744f74ee9df04dab73d32ef.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/80ccc1c646c38a629f06c6723cf3c11d.png",
+      "status": 200,
+      "bytes": 29996,
+      "sha256": "4e579a29ce64410b68b74a9e8707c953174ad749777322fdc3264b642b654c99",
+      "local": [
+        {
+          "path": "public/media/80ccc1c646c38a629f06c6723cf3c11d.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/8eb8b45840b388245f6624cdcebc3656.png",
+      "status": 200,
+      "bytes": 9636,
+      "sha256": "1dc9a6262130e9b2385010240018e639a5f8728032f0f0653f3f9e1d76f80c83",
+      "local": [
+        {
+          "path": "public/media/8eb8b45840b388245f6624cdcebc3656.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/6763565c9f7022037c2c5017efb303ea.png",
+      "status": 200,
+      "bytes": 11008,
+      "sha256": "04af469f3d86214f62d8ef0fc4e99da12f8498342b4e1319e2c36201240647bd",
+      "local": [
+        {
+          "path": "public/media/6763565c9f7022037c2c5017efb303ea.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/f42d9cf6915fc3738a485fb793d584eb.png",
+      "status": 200,
+      "bytes": 15001,
+      "sha256": "903ce7815f08485b54c6c8bb2a50e036abc3c2b7e35d2c9dcd2e6381bc8e8978",
+      "local": [
+        {
+          "path": "public/media/f42d9cf6915fc3738a485fb793d584eb.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/a06ae317bc7778f28b675ccbdac5b130.png",
+      "status": 200,
+      "bytes": 15230,
+      "sha256": "70ee07447fac4d9ff6c92278723764e3fc63078f31820ba37bac057d0ca80094",
+      "local": [
+        {
+          "path": "public/media/a06ae317bc7778f28b675ccbdac5b130.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/429e4f3152780f6520edb4df5a784511.jpg",
+      "status": 200,
+      "bytes": 116467,
+      "sha256": "dd9e31f986a9687f38086d7f1bc6760b8a3ee24b7eecad8d5dd426e75b755634",
+      "local": [
+        {
+          "path": "public/media/429e4f3152780f6520edb4df5a784511.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/ff0c04122cf9804e728c0251b137efa5.png",
+      "status": 200,
+      "bytes": 11544,
+      "sha256": "4d4344cea736334462839e6aae914d5c04b709649253ef2f1203bdf76a0c62a5",
+      "local": [
+        {
+          "path": "public/media/ff0c04122cf9804e728c0251b137efa5.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/430ca062649972bdd02a2f72754ce511.jpg",
+      "status": 200,
+      "bytes": 324795,
+      "sha256": "0c68dd92198f52ccf46f04b076c5f4f481b7a31088aab92eeff85201fd80567b",
+      "local": [
+        {
+          "path": "public/media/430ca062649972bdd02a2f72754ce511.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/3bcedadb68eaa6be6ea49842a47e9187.jpg",
+      "status": 200,
+      "bytes": 358122,
+      "sha256": "90a75621635a20832ab6fcda9a697f2192094e3c68d5d5d8950d46707041c1f6",
+      "local": [
+        {
+          "path": "public/media/3bcedadb68eaa6be6ea49842a47e9187.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/b9a5b3911b746fc355c993968adce8d0.png",
+      "status": 200,
+      "bytes": 3502093,
+      "sha256": "bd6c37abb10ce18173c952cf36591396c918a7cf50e0e555ad9943375d271dd7",
+      "local": [
+        {
+          "path": "public/media/b9a5b3911b746fc355c993968adce8d0.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/5d14b2eec31e921a0c4f9362491fb53d.jpg",
+      "status": 200,
+      "bytes": 325094,
+      "sha256": "2351ed31de47d39aa97dce2b7d0b221f022a85b0da2b858ed27d230016fe99fd",
+      "local": [
+        {
+          "path": "public/media/5d14b2eec31e921a0c4f9362491fb53d.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/67188c0d40fd7b641fe3ea1818bb0e67.jpg",
+      "status": 200,
+      "bytes": 296871,
+      "sha256": "a0659ee18efd49a25c45c578e729d094ae550c619ded2a9931da2019004f74fd",
+      "local": [
+        {
+          "path": "public/media/67188c0d40fd7b641fe3ea1818bb0e67.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/39c1ccde8b8ec16dd4ad36b7af3dbaf1.png",
+      "status": 200,
+      "bytes": 871814,
+      "sha256": "3151431114fef4e07ef7846ca1a6c61150f8a1169aa5877198923c031eec3b9c",
+      "local": [
+        {
+          "path": "public/media/39c1ccde8b8ec16dd4ad36b7af3dbaf1.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/9329d5c683fb6989da054c32080ed203.png",
+      "status": 200,
+      "bytes": 2098814,
+      "sha256": "c6e9cfd87df8ec40326eac074a770820716bcf6afe70de057715172fe7ead0cd",
+      "local": [
+        {
+          "path": "public/media/9329d5c683fb6989da054c32080ed203.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/7b6231a214f5791b8cf22e7de43414de.jpg",
+      "status": 200,
+      "bytes": 324795,
+      "sha256": "0c68dd92198f52ccf46f04b076c5f4f481b7a31088aab92eeff85201fd80567b",
+      "local": [
+        {
+          "path": "public/media/7b6231a214f5791b8cf22e7de43414de.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/0fcdbe96dd69cb4d58e0bf13b4af650b.jpg",
+      "status": 200,
+      "bytes": 335602,
+      "sha256": "6ca60a322c83a8b75744090eac9a7ae60e82f993c8f1cb84b0ba910d5f56fc35",
+      "local": [
+        {
+          "path": "public/media/0fcdbe96dd69cb4d58e0bf13b4af650b.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/34ed81f760c552b1fb1c1dcbb9e2e21e.jpg",
+      "status": 200,
+      "bytes": 311089,
+      "sha256": "4544752f685e2a3db344348cf31e43671790f84c455d4ba5eb4bfce4771f1d95",
+      "local": [
+        {
+          "path": "public/media/34ed81f760c552b1fb1c1dcbb9e2e21e.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/8f5e93a380f595afbb8e0fa34a906055.jpg",
+      "status": 200,
+      "bytes": 358122,
+      "sha256": "90a75621635a20832ab6fcda9a697f2192094e3c68d5d5d8950d46707041c1f6",
+      "local": [
+        {
+          "path": "public/media/8f5e93a380f595afbb8e0fa34a906055.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/8abc81c7254ada423d53330b7269e8ad.jpg",
+      "status": 200,
+      "bytes": 325094,
+      "sha256": "2351ed31de47d39aa97dce2b7d0b221f022a85b0da2b858ed27d230016fe99fd",
+      "local": [
+        {
+          "path": "public/media/8abc81c7254ada423d53330b7269e8ad.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/4f225521f708ab8aea5c3cad73b8671f.jpg",
+      "status": 200,
+      "bytes": 256608,
+      "sha256": "0187c234f52028213803555b06e04229ca780c4d8b530da7fbd77e6e28c20a48",
+      "local": [
+        {
+          "path": "public/media/4f225521f708ab8aea5c3cad73b8671f.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/e390ed507db8515672f8ab58afa2e504.jpg",
+      "status": 200,
+      "bytes": 296871,
+      "sha256": "a0659ee18efd49a25c45c578e729d094ae550c619ded2a9931da2019004f74fd",
+      "local": [
+        {
+          "path": "public/media/e390ed507db8515672f8ab58afa2e504.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/4788db7c41be491ef7da026d510beb7f.jpg",
+      "status": 200,
+      "bytes": 300123,
+      "sha256": "3e0a6ca39d82d3d0c04c76cef3b0062a0a9fb4b3fa8957cfec8e90ff75bacc9a",
+      "local": [
+        {
+          "path": "public/media/4788db7c41be491ef7da026d510beb7f.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/31e7207a7507ab93960b2bedf912a8c7.jpg",
+      "status": 200,
+      "bytes": 228374,
+      "sha256": "e984b91428954d84bad2c688ecdb78d422fa9271fba76fb2ab41643e67973287",
+      "local": [
+        {
+          "path": "public/media/31e7207a7507ab93960b2bedf912a8c7.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/app_screen_3-p2e8B.png",
+      "status": 200,
+      "bytes": 124493,
+      "sha256": "700c8943760f85ae4b2c7a4066ef54406d5d72e51bd2ea275a82e58812608e39",
+      "local": [
+        {
+          "path": "public/media/app_screen_3-p2e8B.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/cu_seite-cashC.png",
+      "status": 200,
+      "bytes": 343431,
+      "sha256": "4903398bd6e6a5437ed47b96d0b55001573bb99c051be0445e59996ba46b6c41",
+      "local": [
+        {
+          "path": "public/media/cu_seite-cashC.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/float_magazin-iBOod.png",
+      "status": 200,
+      "bytes": 243089,
+      "sha256": "4a2c94df0fff09a7ce398f17829470dfff44cfd4b793f95f26172aad7b647b7b",
+      "local": [
+        {
+          "path": "public/media/float_magazin-iBOod.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/cu_front-VfFNf.png",
+      "status": 200,
+      "bytes": 325994,
+      "sha256": "3358915db8b07cf82b4649900cf09294830c0e2f589d949e7a720f904482c296",
+      "local": [
+        {
+          "path": "public/media/cu_front-VfFNf.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/449bffd246d80582a1107f5688f757cb.png",
+      "status": 200,
+      "bytes": 645001,
+      "sha256": "08bcdfda908dbd6c0f6e8ec3d83f50002cca7e1b0ceb1526cbf858bde1516907",
+      "local": [
+        {
+          "path": "public/media/449bffd246d80582a1107f5688f757cb.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/cu_overview-LYR18.png",
+      "status": 200,
+      "bytes": 487565,
+      "sha256": "6ce758c707988a3d1c18266d497f203e39b0295dad31308751f4acdefb7338d1",
+      "local": [
+        {
+          "path": "public/media/cu_overview-LYR18.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/8a13c5ecb8af06a7aa1e786676801d8a.png",
+      "status": 200,
+      "bytes": 670207,
+      "sha256": "6b0b3142243fb6a2a28d9ab04ec8411104cc453af86c1282c8fe0b0ee52f55f2",
+      "local": [
+        {
+          "path": "public/media/8a13c5ecb8af06a7aa1e786676801d8a.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/e24f650ececc4f712eee0515c854dadd.png",
+      "status": 200,
+      "bytes": 504892,
+      "sha256": "e21e9bf9c7eed95de0602a7a7fd69ae62195ad8676445a73d4cc7206913af428",
+      "local": [
+        {
+          "path": "public/media/e24f650ececc4f712eee0515c854dadd.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/f468096f2bedd6cf3299b65f182cfab1.png",
+      "status": 200,
+      "bytes": 653974,
+      "sha256": "7afd6b90252c05fbd13d6b59367a2768eb936042b653c64fc302b7edc91eacd3",
+      "local": [
+        {
+          "path": "public/media/f468096f2bedd6cf3299b65f182cfab1.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/50ca1ae5b80916e4441afaf7bb95bdc9.png",
+      "status": 200,
+      "bytes": 504892,
+      "sha256": "e21e9bf9c7eed95de0602a7a7fd69ae62195ad8676445a73d4cc7206913af428",
+      "local": [
+        {
+          "path": "public/media/50ca1ae5b80916e4441afaf7bb95bdc9.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/7389f4a82f13162b59d72b803198ee54.png",
+      "status": 200,
+      "bytes": 651672,
+      "sha256": "358ea2229e930cd955b4573732f155604b4073865a1826f364d1316c830dc4cc",
+      "local": [
+        {
+          "path": "public/media/7389f4a82f13162b59d72b803198ee54.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/6f0b9b0705f634f9ea3783e71c17d7bc.png",
+      "status": 200,
+      "bytes": 504141,
+      "sha256": "06609ff9574e077a7db428882393c24862c0ad2d3780d17c04ce2df0c2a4d610",
+      "local": [
+        {
+          "path": "public/media/6f0b9b0705f634f9ea3783e71c17d7bc.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/0dae1c5b8608f0cd0277991c6d13580e.png",
+      "status": 200,
+      "bytes": 684842,
+      "sha256": "6bff7334e74e3428cfe7beff4d2ae2f6459a059014dcc70dd5cc684d83e7bdb2",
+      "local": [
+        {
+          "path": "public/media/0dae1c5b8608f0cd0277991c6d13580e.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/sd-logo_variant_green-white_rgb_png-DJz8V.png",
+      "status": 200,
+      "bytes": 8427,
+      "sha256": "bb32d34cc99079c772d0efab36c7c3afb1120407b3b2ae0d17f8821c05fcee26",
+      "local": [
+        {
+          "path": "public/media/positionhold/sd-logo_variant_green-white_rgb_png-DJz8V.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/9e931b78-a97e-475e-99a2-3a70b48cf364/fb7fe4bd168f53ff40bdb3c726624410.png",
+      "status": 200,
+      "bytes": 673233,
+      "sha256": "2934a7fe0a2434eecb4ac07ff9d7344f33c08e41a858631d68931574dc254136",
+      "local": [
+        {
+          "path": "public/media/fb7fe4bd168f53ff40bdb3c726624410.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/d09865b04744f74ee9df04dab73d32ef.png",
+      "status": 200,
+      "bytes": 49730,
+      "sha256": "10a590ae32e6c87d0dbc0ed39eba4e11bf502c68cdc9abef0d02c13c14eaa382",
+      "local": [
+        {
+          "path": "public/media/d09865b04744f74ee9df04dab73d32ef.png",
+          "equal": true
+        },
+        {
+          "path": "public/media/positionhold/d09865b04744f74ee9df04dab73d32ef.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/7b6231a214f5791b8cf22e7de43414de.jpg",
+      "status": 200,
+      "bytes": 324795,
+      "sha256": "0c68dd92198f52ccf46f04b076c5f4f481b7a31088aab92eeff85201fd80567b",
+      "local": [
+        {
+          "path": "public/media/7b6231a214f5791b8cf22e7de43414de.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/0fcdbe96dd69cb4d58e0bf13b4af650b.jpg",
+      "status": 200,
+      "bytes": 335602,
+      "sha256": "6ca60a322c83a8b75744090eac9a7ae60e82f993c8f1cb84b0ba910d5f56fc35",
+      "local": [
+        {
+          "path": "public/media/0fcdbe96dd69cb4d58e0bf13b4af650b.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/34ed81f760c552b1fb1c1dcbb9e2e21e.jpg",
+      "status": 200,
+      "bytes": 311089,
+      "sha256": "4544752f685e2a3db344348cf31e43671790f84c455d4ba5eb4bfce4771f1d95",
+      "local": [
+        {
+          "path": "public/media/34ed81f760c552b1fb1c1dcbb9e2e21e.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/8f5e93a380f595afbb8e0fa34a906055.jpg",
+      "status": 200,
+      "bytes": 358122,
+      "sha256": "90a75621635a20832ab6fcda9a697f2192094e3c68d5d5d8950d46707041c1f6",
+      "local": [
+        {
+          "path": "public/media/8f5e93a380f595afbb8e0fa34a906055.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/8abc81c7254ada423d53330b7269e8ad.jpg",
+      "status": 200,
+      "bytes": 325094,
+      "sha256": "2351ed31de47d39aa97dce2b7d0b221f022a85b0da2b858ed27d230016fe99fd",
+      "local": [
+        {
+          "path": "public/media/8abc81c7254ada423d53330b7269e8ad.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/4f225521f708ab8aea5c3cad73b8671f.jpg",
+      "status": 200,
+      "bytes": 256608,
+      "sha256": "0187c234f52028213803555b06e04229ca780c4d8b530da7fbd77e6e28c20a48",
+      "local": [
+        {
+          "path": "public/media/4f225521f708ab8aea5c3cad73b8671f.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/e390ed507db8515672f8ab58afa2e504.jpg",
+      "status": 200,
+      "bytes": 296871,
+      "sha256": "a0659ee18efd49a25c45c578e729d094ae550c619ded2a9931da2019004f74fd",
+      "local": [
+        {
+          "path": "public/media/e390ed507db8515672f8ab58afa2e504.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/4788db7c41be491ef7da026d510beb7f.jpg",
+      "status": 200,
+      "bytes": 300123,
+      "sha256": "3e0a6ca39d82d3d0c04c76cef3b0062a0a9fb4b3fa8957cfec8e90ff75bacc9a",
+      "local": [
+        {
+          "path": "public/media/4788db7c41be491ef7da026d510beb7f.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/31e7207a7507ab93960b2bedf912a8c7.jpg",
+      "status": 200,
+      "bytes": 228374,
+      "sha256": "e984b91428954d84bad2c688ecdb78d422fa9271fba76fb2ab41643e67973287",
+      "local": [
+        {
+          "path": "public/media/31e7207a7507ab93960b2bedf912a8c7.jpg",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/app_screen_3-p2e8B.png",
+      "status": 200,
+      "bytes": 124493,
+      "sha256": "700c8943760f85ae4b2c7a4066ef54406d5d72e51bd2ea275a82e58812608e39",
+      "local": [
+        {
+          "path": "public/media/app_screen_3-p2e8B.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/float_magazin-iBOod.png",
+      "status": 200,
+      "bytes": 243089,
+      "sha256": "4a2c94df0fff09a7ce398f17829470dfff44cfd4b793f95f26172aad7b647b7b",
+      "local": [
+        {
+          "path": "public/media/float_magazin-iBOod.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/cu_seite-cashC.png",
+      "status": 200,
+      "bytes": 343431,
+      "sha256": "4903398bd6e6a5437ed47b96d0b55001573bb99c051be0445e59996ba46b6c41",
+      "local": [
+        {
+          "path": "public/media/cu_seite-cashC.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/cu_front-VfFNf.png",
+      "status": 200,
+      "bytes": 325994,
+      "sha256": "3358915db8b07cf82b4649900cf09294830c0e2f589d949e7a720f904482c296",
+      "local": [
+        {
+          "path": "public/media/cu_front-VfFNf.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/449bffd246d80582a1107f5688f757cb.png",
+      "status": 200,
+      "bytes": 645001,
+      "sha256": "08bcdfda908dbd6c0f6e8ec3d83f50002cca7e1b0ceb1526cbf858bde1516907",
+      "local": [
+        {
+          "path": "public/media/449bffd246d80582a1107f5688f757cb.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/cu_overview-LYR18.png",
+      "status": 200,
+      "bytes": 487565,
+      "sha256": "6ce758c707988a3d1c18266d497f203e39b0295dad31308751f4acdefb7338d1",
+      "local": [
+        {
+          "path": "public/media/cu_overview-LYR18.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/8a13c5ecb8af06a7aa1e786676801d8a.png",
+      "status": 200,
+      "bytes": 670207,
+      "sha256": "6b0b3142243fb6a2a28d9ab04ec8411104cc453af86c1282c8fe0b0ee52f55f2",
+      "local": [
+        {
+          "path": "public/media/8a13c5ecb8af06a7aa1e786676801d8a.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/f468096f2bedd6cf3299b65f182cfab1.png",
+      "status": 200,
+      "bytes": 653974,
+      "sha256": "7afd6b90252c05fbd13d6b59367a2768eb936042b653c64fc302b7edc91eacd3",
+      "local": [
+        {
+          "path": "public/media/f468096f2bedd6cf3299b65f182cfab1.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/7389f4a82f13162b59d72b803198ee54.png",
+      "status": 200,
+      "bytes": 651672,
+      "sha256": "358ea2229e930cd955b4573732f155604b4073865a1826f364d1316c830dc4cc",
+      "local": [
+        {
+          "path": "public/media/7389f4a82f13162b59d72b803198ee54.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/fb7fe4bd168f53ff40bdb3c726624410.png",
+      "status": 200,
+      "bytes": 673233,
+      "sha256": "2934a7fe0a2434eecb4ac07ff9d7344f33c08e41a858631d68931574dc254136",
+      "local": [
+        {
+          "path": "public/media/fb7fe4bd168f53ff40bdb3c726624410.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/9278c9a8a3ea88b81ff0d9e7b8229877.pdf",
+      "status": 200,
+      "bytes": 260861,
+      "sha256": "fdeaa57259362c5ccbd064e936fffd92526a7346d1a8c919017b355e2bfd6915",
+      "local": [
+        {
+          "path": "public/media/9278c9a8a3ea88b81ff0d9e7b8229877.pdf",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/0dae1c5b8608f0cd0277991c6d13580e.png",
+      "status": 200,
+      "bytes": 684842,
+      "sha256": "6bff7334e74e3428cfe7beff4d2ae2f6459a059014dcc70dd5cc684d83e7bdb2",
+      "local": [
+        {
+          "path": "public/media/0dae1c5b8608f0cd0277991c6d13580e.png",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/1df41139ddc91a1496cb225088086ae2.pdf",
+      "status": 200,
+      "bytes": 358411,
+      "sha256": "6269b38f3285d3156c988c65570454c46af370ebab25a24f0ea23a2328885a97",
+      "local": [
+        {
+          "path": "public/media/1df41139ddc91a1496cb225088086ae2.pdf",
+          "equal": true
+        }
+      ]
+    },
+    {
+      "url": "https://horizons-cdn.hostinger.com/12384ca6-c79f-48cb-934b-6f83d65e28f4/4b92ac903dfba2c5551db3e795093aa8.pdf",
+      "status": 200,
+      "bytes": 175228,
+      "sha256": "c6b0f4c21f49a36d8cf0cc8ccc2e16c73204f0f26d56cd21c73d69e1e02127a8",
+      "local": [
+        {
+          "path": "public/media/4b92ac903dfba2c5551db3e795093aa8.pdf",
+          "equal": true
+        }
+      ]
+    }
+  ],
+  "pdfs": [
+    {
+      "path": "hcgi/platform/api/files/pbc_5325346724/18c8rk35gmrop5c/installationsanleitung_wcu_jt4orb9koe.pdf",
+      "status": 200,
+      "sha256": "6459e0fc93442690df6d76a1ff72cbd7b61ada3191b3506f1ebdbb44b18d23a9",
+      "equal": true
+    },
+    {
+      "path": "hcgi/platform/api/files/pbc_5325346724/337cp1alrjwrnt0/337cp1alrjwrnt0_rlij375adk.pdf",
+      "status": 200,
+      "sha256": "477cd4ad1c7a8e46ab850d0c7b2d543337f0eb4da52d51878b9b910e7f1e47d2",
+      "equal": true
+    },
+    {
+      "path": "hcgi/platform/api/files/pbc_5325346724/5fbj0zzxxjnxvkq/5fbj0zzxxjnxvkq_y4evbcxx82.pdf",
+      "status": 200,
+      "sha256": "e938048b9e4790bc3c60037c77f5097f42a62181e1bf20f78da1abc6eeb7d033",
+      "equal": true
+    },
+    {
+      "path": "hcgi/platform/api/files/pbc_5325346724/6jyst7hobko7fs2/6jyst7hobko7fs2_801sd8dnbc.pdf",
+      "status": 200,
+      "sha256": "c0dab51b0377392b370fff41e4952e02cdc9afb13cba17f548016d349896e3b7",
+      "equal": true
+    },
+    {
+      "path": "hcgi/platform/api/files/pbc_5325346724/dql8d8pt3achiap/dql8d8pt3achiap_4lqcfc0ufy.pdf",
+      "status": 200,
+      "sha256": "02f71cd4d4650e7da55fe70611008ef5a657b827a752f445213012652dfec287",
+      "equal": true
+    },
+    {
+      "path": "hcgi/platform/api/files/pbc_5325346724/fer7cp5fbf9ocq9/fer7cp5fbf9ocq9_lexsel4qah.pdf",
+      "status": 200,
+      "sha256": "87abc16f37ba10e5eb4de26cfb98588d6df5401dc7a144e4f8b888b691657716",
+      "equal": true
+    },
+    {
+      "path": "hcgi/platform/api/files/pbc_5325346724/nzdk8g7p2xu4jxi/nzdk8g7p2xu4jxi_uzkh3hk59o.pdf",
+      "status": 200,
+      "sha256": "7a3226651c50f1acf947c3699a8e679c3a60acdbd44e06ee0c596b3cc8cfeb45",
+      "equal": true
+    },
+    {
+      "path": "hcgi/platform/api/files/pbc_5325346724/obtksgzjjfq8mbm/obtksgzjjfq8mbm_pupy2jla51.pdf",
+      "status": 200,
+      "sha256": "a8643399a2efb5a99b1e11b6f3f249b1171ab18d76c5d541e8e65ccf751ddf1f",
+      "equal": true
+    },
+    {
+      "path": "hcgi/platform/api/files/pbc_5325346724/pk00u661igizrps/pk00u661igizrps_fr7rq2orew.pdf",
+      "status": 200,
+      "sha256": "5a1676a76343f668353c0f9006c66502e877f32a2a73f1da98f0deb7665a9277",
+      "equal": true
+    },
+    {
+      "path": "hcgi/platform/api/files/pbc_5325346724/vg464iaea8uznhd/vg464iaea8uznhd_us74lwbf1v.pdf",
+      "status": 200,
+      "sha256": "380d1b7246a3bd73dece9f45f61d339e67777bfd42ed8599b2d3372b80356354",
+      "equal": true
+    }
+  ]
+}
