@@ -7,11 +7,13 @@
 | Ziele, Team, verbindlicher Umfang | [Projektübersicht](projektuebersicht.md) |
 | Verbindliche Arbeitsregeln | [AGENTS.md](../AGENTS.md); CLAUDE.md verweist darauf |
 | Arbeitsbeginn, Befehle, PR-Ablauf | [CONTRIBUTING.md](../CONTRIBUTING.md) |
+| Erster Arbeitstag, GitHub-Begriffe und parallele Agenten | [Teameinstieg](arbeitsweise/teameinstieg.md) |
 | Gute Aufträge für Menschen und KI | [AI First](arbeitsweise/ai-first.md) |
 | Offene Arbeit und Bearbeitungsstand | [GitHub Issues](https://github.com/Thitronik/smartdock-website/issues) |
 | Architekturfragen und dauerhafte Entscheidungen | [Entscheidungsübersicht](entscheidungen/README.md) |
 | Build, Herkunft und schrittweiser Umbau | [Migrationsplan](migration/aufbau.md) |
 | Veröffentlichung und datierte Nachweise | [Vorschau](betrieb/vorschau.md) |
+| Informationen und Zugänge für Hetzner/Brevo | [Betrieb vorbereiten](betrieb/zugaenge-und-start.md); aktueller Stand in [#20](https://github.com/Thitronik/smartdock-website/issues/20) |
 | Ursprünglicher Export und geprüfte Einstiege | [Bestandsaufnahme](pruefung/bestandsaufnahme-2026-10-21.md) mit CSV-Belegen |
 | Beobachtete Preisfälle und offene Prüfungen | [Konfigurator-Prüftabelle](pruefung/konfigurator-prueftabelle.md) |
 

@@ -19,7 +19,8 @@ Team: Marlene, Adrian, Sönke und Max. Fachliche Zuständigkeiten stehen noch au
 - `dist/` und `_site/` werden gebaut und nie eingecheckt. `package-lock.json` wird eingecheckt. Die historischen Prüf-CSV beziehen sich weiter auf den ursprünglichen Export.
 - Vor Commit und PR muss `npm run check` bestehen. Bei Build-/Pfadänderungen Root und Pages im Browser prüfen. `npm run verify:reference` ist nur der historische Migrationsvergleich; gewollte spätere Inhalte dürfen davon abweichen.
 - Fehlerkorrekturen durch einen passenden Regressionsfall absichern. Für reine Text-/Dokumentationsänderungen reichen vorhandene Prüfungen und Sichtprüfung. Tests zeigen beobachtetes Verhalten, keine erfundenen fachlichen Sollwerte.
-- Bestehende Staging-Inhalte und DE/EN/FR/NL/ES erhalten. Italienisch ist nicht im Umfang. Fachliche Preise, Produktregeln und Rechtstexte nicht aus Vermutungen ändern.
+- Bestehendes Design, Funktionen, Staging-Inhalte und DE/EN/FR/NL/ES erhalten. Italienisch ist nicht im Umfang. Ein Hosting- oder Technikwechsel ist kein Redesign und verkleinert den Umfang nicht. Bestätigte Fehler gezielt korrigieren; fachliche Preise, Produktregeln und Rechtstexte nicht aus Vermutungen ändern.
+- Bei sichtbaren oder funktionalen Änderungen den Ausgangs-Commit, betroffene Abläufe und Vorher-/Nachher-Belege im PR nennen; Desktop und Mobil vergleichen. Gewollte Fehlerkorrekturen von unbeabsichtigten Abweichungen trennen. Fehlende Vergleichsbelege als offen ausweisen, nicht als identisch bestätigen.
 - Deutsch und UTF-8 verwenden. Textdateien mit Editor-Werkzeug oder Node schreiben; kein `Set-Content` oder `Out-File` aus PowerShell 5.1. Übernommene Pakete und Medien nicht nebenbei umformatieren.
 
 ## Grenzen und Übergabe
@@ -31,4 +32,4 @@ Team: Marlene, Adrian, Sönke und Max. Fachliche Zuständigkeiten stehen noch au
 - Browserbefunde von Vermutungen trennen und offene Fehler in GitHub nachhalten. Keine vollständige Freigabe aus wenigen Stichproben ableiten.
 - Im PR Problem, Änderung, konkrete Prüfergebnisse und offene Punkte festhalten. Zugehöriges Issue aktualisieren. Erledigt ist eine Aufgabe erst gemäß ihren Fertig-Kriterien; eine ausstehende veröffentlichte Prüfung benennen.
 
-Die [AI-First-Anleitung](docs/arbeitsweise/ai-first.md) enthält Beispiele für gute Aufträge und Übergaben. `CLAUDE.md` verweist auf diese Datei; gemeinsame Regeln werden nur hier gepflegt.
+Der [Teameinstieg](docs/arbeitsweise/teameinstieg.md) erklärt den ersten Arbeitstag und parallele Aufgaben. Die [AI-First-Anleitung](docs/arbeitsweise/ai-first.md) enthält Beispiele für gute Aufträge und Übergaben. `CLAUDE.md` verweist auf diese Datei; gemeinsame Regeln werden nur hier gepflegt.
