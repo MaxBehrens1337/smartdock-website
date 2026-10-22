@@ -48,3 +48,18 @@ Nach Einbindung der Bilder: alle sechs Bilder im Browser geladen und visuell gep
 Kachelraster bei 1280 px dreispaltig, bei 375 px einspaltig; kein horizontaler
 Überlauf (scrollWidth = innerWidth = 375). Der Freischaltbutton in der Zusammenfassung
 ist deaktiviert und nennt den Ablauf nach sieben Tagen.
+
+## Gestaltung an vorhandene Unterseiten angeglichen
+
+Nach Rückmeldung von Adrian wird die bestehende `/assets/style.css` eingebunden.
+Die Händlerseite verwendet deren Farbvariablen und Schriftfamilie statt einer
+eigenen grünlichen Palette. Im Browser mit Produktseite abgeglichen:
+Hintergrund `rgb(24, 27, 32)`, primäre Buttons `rgb(204, 255, 0)`, Schrift Outfit.
+Headerlogo ist dieselbe Datei `db32cac9a31619468d321af737c640a2.png` wie auf der
+bestehenden Produktseite. Seiteneinstieg mit Breadcrumb, zentriertem Titel und
+Abständen folgt der Produktseite. Formulare und Kacheln erhalten neutrale Flächen.
+Sprachmenü und Burgermenü verwenden native Details-Elemente, Escape schließt sie.
+DE/EN-Sprachwechsel und Menüs mobil geprüft, 375 px ohne horizontalen Überlauf.
+Der neue Händlerkopf ist eine statische Umsetzung nach dem bestehenden Header;
+er lädt keine zweite React-Anwendung. Startseite und vorhandene Unterseiten
+wurden nicht umgestaltet.
