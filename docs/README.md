@@ -14,6 +14,7 @@
 | Veröffentlichung und datierte Nachweise | [Vorschau](betrieb/vorschau.md) |
 | Ursprünglicher Export und geprüfte Einstiege | [Bestandsaufnahme](pruefung/bestandsaufnahme-2026-10-21.md) mit CSV-Belegen |
 | Beobachtete Preisfälle und offene Prüfungen | [Konfigurator-Prüftabelle](pruefung/konfigurator-prueftabelle.md) |
+| PDF-Beschriftung, Downloads und Regression | [PDF-Prüfung vom 22.10.2026](pruefung/pdf-zwischensumme-2026-10-22.md) |
 
 Historische CSV-Dateien bleiben datiert und unverändert. Aktuelle Arbeit wird in
 Issues gepflegt, statt dieselbe Aufgabenliste in mehreren Dokumenten zu führen.
