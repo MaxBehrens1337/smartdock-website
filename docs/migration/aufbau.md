@@ -67,4 +67,6 @@ Ein Paket wird erst entfernt, wenn kein Einstieg es mehr benötigt. Bekannte Rec
 
 Während des Aufbaus kamen auf staging die Commits `9e09cf0` und `f84a0cc` mit einer vorbereiteten MariaDB-Migration hinzu. [Schema und Importhinweise](../../database/README.md) sind unverändert übernommen. Sie werden nicht in die Website-Ausgabe kopiert und wurden im Rahmen dieses Aufbaus nicht auf einer Datenbank ausgeführt oder fachlich als Backend-Entscheidung freigegeben.
 
+**Ergänzung vom 22. Oktober 2026:** Commit `8738f03` dokumentiert die inzwischen separat erfolgte Installation des Schemas auf Hetzner am 21. Oktober. Laut diesem Nachweis wurden alle fünf Tabellen geprüft und waren leer. Backend, Double-Opt-in und Mailversand sind weiterhin nicht angebunden. Der Nachweis wird beim Zusammenführen erhalten; eine erneute Ausführung der Erstmigration ist nicht vorgesehen.
+
 Technische Grundlage des Workflows: [GitHub Pages mit eigenen Workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), [Node-Dateisystem-API](https://nodejs.org/docs/latest-v24.x/api/fs.html).

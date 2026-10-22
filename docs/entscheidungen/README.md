@@ -7,7 +7,7 @@ Datei oder ein erwähnter Anbieter ist noch keine freigegebene Architektur.
 |---|---|---|
 | E01 | Wie kommen wir ohne Originalzugang zu wartbarem Code? | Eigener Node-24-Build umgesetzt und über PR #1 auf main übernommen. Lesbare Komponenten werden nach dem [Migrationsplan](../migration/aufbau.md) ergänzt; [#13](https://github.com/Thitronik/smartdock-website/issues/13) bleibt offen. |
 | E02 | Brauchen wir ein CMS? | Offen. Typische Seite und FAQ in fünf Sprachen durch Entwurf, Bilder, Vorschau, Freigabe und Rücknahme führen; Dateipflege und CMS vergleichen. |
-| E03 | Welches Backend benötigen wir? | Offen. Anfragen, Konfigurationen, Anmeldung und geschützte Downloads samt Daten, Rechten, Aufbewahrung und Wiederherstellung beschreiben. Das MariaDB-Schema ist nur vorbereitet. |
+| E03 | Welches Backend benötigen wir? | Anwendungsarchitektur offen. Anfragen, Konfigurationen, Anmeldung und geschützte Downloads samt Daten, Rechten, Aufbewahrung und Wiederherstellung beschreiben. Das [MariaDB-Schema ist laut Installationsnachweis auf Hetzner angelegt](../../database/README.md); Backend und Mailversand sind noch nicht angebunden. |
 | E04 | Wie funktionieren Newsletter und Anfragen? | Offen. Getrennte Abläufe, Empfänger, Versand, Einwilligungen und Fehlerfälle sowie vorhandene E-Mail-Dienste erfassen. |
 | E05 | Wo betreiben wir Website und Dienste? | Offen. Anforderungen E02–E04, vorhandene Verträge, Vorschauen, Zugangsschutz, Teamkosten, Pflege und Rücknahme vergleichen. GitHub Pages dient bereits als Vorschau. |
 | E06 | Wer prüft und veröffentlicht? | Merge-Ablauf in [AGENTS.md](../../AGENTS.md). Fachliche Zuständigkeiten, Teamzugriffe, Board und technischer Branchschutz noch offen. |

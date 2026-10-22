@@ -1,6 +1,6 @@
 # SMARTDOCK: Projektübersicht
 
-Stand: 21. Oktober 2026. **Die gemeinsame Arbeitsbasis liegt auf main.**
+Stand: 22. Oktober 2026. **Die gemeinsame Arbeitsbasis liegt auf main.**
 Die [veröffentlichte Vorschau und ihre Prüfnachweise](betrieb/vorschau.md) sind
 dokumentiert. Die fachliche Gesamtabnahme und der produktive Betrieb stehen noch aus.
 
@@ -31,7 +31,7 @@ und Downloads vorgesehen; Zugangsregeln und Umsetzung sind offen.
 | Konfigurator | Auswahl, Modulzuordnung, Preise und PDF-Ausgabe; erste Prüffälle dokumentiert | Preisfreigabe [#5](https://github.com/Thitronik/smartdock-website/issues/5), PDF-Beschriftung [#11](https://github.com/Thitronik/smartdock-website/issues/11) |
 | Sprachen | DE/EN/FR/NL/ES vorhanden | Rückfälle und Titel [#9](https://github.com/Thitronik/smartdock-website/issues/9), vollständige Sprachprüfung |
 | Formulare | Oberflächen und lokale Vorschauabläufe | Zustellung, Einwilligungen, Fehlerbehandlung und Missbrauchsschutz |
-| Backend | Historische Schnittstellenaufrufe im Export; [MariaDB-Schema vorbereitet](../database/README.md) | Architekturentscheidung, freigegebene Zielumgebung und implementierter Betrieb; keine ausgeführte Migration nachgewiesen |
+| Backend | Historische Schnittstellenaufrufe im Export; [Installation des MariaDB-Schemas auf Hetzner dokumentiert](../database/README.md), fünf leere Tabellen laut Installationsnachweis | Anwendungsarchitektur und Betrieb festlegen; Backend, Double-Opt-in und Mailversand noch nicht angebunden oder getestet |
 | Redaktion / Hosting | Dateibasierte Inhalte und GitHub Pages als Vorschau | CMS-Bedarf und Produktionshosting entscheiden |
 | Downloads / Rechtliches | Öffentliche PDFs und vorhandene Rechtstext-Seiten | Downloadschutz, fachliche Prüfung von Produktangaben, Impressum und Datenschutz |
 

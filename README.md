@@ -46,5 +46,6 @@ Website-Builds. Alle [Befehle und Grenzen](CONTRIBUTING.md) sind dokumentiert.
 `main` enthält übernommene Arbeitsstände und veröffentlicht keine Produktionsseite.
 Newsletter, Kontakt und Konfigurationen bleiben Vorschauabläufe.
 
-Produktionshosting, CMS und Backend sind noch offen. Die vorbereitete
-[Datenbankmigration](database/README.md) ist keine aktive Anbindung.
+Produktionshosting, CMS und Backend-Anbindung sind noch offen. Die
+[Installation des MariaDB-Schemas](database/README.md) ist dokumentiert;
+Formulare und Mailversand sind daran noch nicht angebunden.
