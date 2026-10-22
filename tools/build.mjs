@@ -49,7 +49,15 @@ export function adaptForBase(source, name, base) {
   }
   if (name.endsWith('.html')) {
     const helper = '<script>window.__sdPagesUrl=function(u){if(typeof u!=="string")return u;try{var v=new URL(u,location.href);if(v.origin===location.origin&&!v.pathname.startsWith("' + base + '/")&&v.pathname!=="' + base + '")return "' + base + '"+v.pathname+v.search+v.hash}catch(e){}return u};document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(a){var u=a.getAttribute("href");if(u&&u.startsWith("/")&&!u.startsWith("//"))a.setAttribute("href",window.__sdPagesUrl(u))}},true);</script>';
-    text = text.replace('<head>', '<head>' + helper);
+    // Auch kopierte Links und „in neuem Tab öffnen“ müssen stimmen. Der bisherige
+    // Klick-Handler reparierte dynamisch erzeugte hrefs erst beim normalen Klick.
+    const linkRepair = `<script>(()=>{
+      const fix=a=>{const u=a.getAttribute('href');if(!u||!(u.startsWith('/')||u.startsWith(location.origin+'/')))return;const v=window.__sdPagesUrl(u);if(v!==u)a.setAttribute('href',v)};
+      const scan=node=>{if(node.nodeType!==1)return;if(node.matches('a[href]'))fix(node);node.querySelectorAll('a[href]').forEach(fix)};
+      new MutationObserver(records=>{for(const record of records){if(record.type==='attributes')fix(record.target);else record.addedNodes.forEach(scan)}}).observe(document.documentElement,{subtree:true,childList:true,attributes:true,attributeFilter:['href']});
+      document.addEventListener('DOMContentLoaded',()=>scan(document.documentElement),{once:true});
+    })();</script>`;
+    text = text.replace('<head>', '<head>' + helper + linkRepair);
   }
   return text;
 }

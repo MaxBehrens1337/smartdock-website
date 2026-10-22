@@ -1,5 +1,10 @@
 # SMARTDOCK: Konfigurator-Prüftabelle
 
+**Historischer Stand:** Die unten erfassten ACU-Preise waren keine Live-Freigabe.
+Der [Live-Abgleich vom 22.10.2026](live-abgleich-2026-10-22.md) belegt die Abweichung
+und die Korrektur auf WCU/1.250 € für eine einzelne Ankerwinde. Dieser ältere
+Prüfbericht bleibt als Ausgangsnachweis unverändert erhalten.
+
 Stand: 21. Oktober 2026. Aufgabe: [#5](https://github.com/Thitronik/smartdock-website/issues/5).
 Quellstand: [staging d74e084](https://github.com/Thitronik/smartdock-website/commit/d74e08402bc2c4d480296ec1e494c0f25ded2eaf).
 

@@ -15,6 +15,7 @@
 | Veröffentlichung und datierte Nachweise | [Vorschau](betrieb/vorschau.md) |
 | Informationen und Zugänge für Hetzner/Brevo | [Betrieb vorbereiten](betrieb/zugaenge-und-start.md); aktueller Stand in [#20](https://github.com/Thitronik/smartdock-website/issues/20) |
 | Ursprünglicher Export und geprüfte Einstiege | [Bestandsaufnahme](pruefung/bestandsaufnahme-2026-10-21.md) mit CSV-Belegen |
+| Aktueller Vergleich mit smartdock.de, behobene Abweichungen und Prüfgrenzen | [Live-Abgleich vom 22.10.2026](pruefung/live-abgleich-2026-10-22.md) |
 | Beobachtete Preisfälle und offene Prüfungen | [Konfigurator-Prüftabelle](pruefung/konfigurator-prueftabelle.md) |
 | PDF-Beschriftung, Downloads und Regression | [PDF-Prüfung vom 22.10.2026](pruefung/pdf-zwischensumme-2026-10-22.md) |
 
