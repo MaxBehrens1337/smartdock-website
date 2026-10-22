@@ -92,6 +92,8 @@ export async function createOutput(base = '') {
   for (const directory of ['public', 'vendor/website']) {
     for (const [name, bytes] of await readTree(path.join(ROOT, directory))) add(name, bytes);
   }
+  // Kleine lesbare Ergänzung zum übernommenen Position-Hold-Stylesheet.
+  files.set('assets/positionhold.css', Buffer.concat([files.get('assets/positionhold.css'), Buffer.from('\n'), await readFile(path.join(ROOT, 'src/positionhold-motion.css'))]));
   for (const [name, bytes] of await readTree(path.join(ROOT, 'content'))) {
     if (!name.endsWith('.json')) throw new Error('In content sind nur JSON-Daten erlaubt.');
     const parsed = JSON.parse(bytes.toString('utf8'));
