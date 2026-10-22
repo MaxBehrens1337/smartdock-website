@@ -1,0 +1,30 @@
+name: Aufgabe oder Verbesserung
+description: Eine gewünschte Änderung für Team, Codex oder Claude Code beschreiben.
+body:
+  - type: textarea
+    id: ziel
+    attributes:
+      label: Was soll sich ändern?
+      description: Beschreibe den gewünschten Nutzen. Technische Dateinamen musst du nicht kennen.
+    validations:
+      required: true
+  - type: textarea
+    id: kontext
+    attributes:
+      label: Wo und auf welcher Grundlage?
+      description: Seite, Sprache, Beispiel, vorhandenes Issue oder fachliche Quelle. Keine Zugangsdaten oder personenbezogenen Testdaten.
+    validations:
+      required: true
+  - type: textarea
+    id: fertig
+    attributes:
+      label: Wann ist es fertig?
+      description: Beobachtbare Ergebnisse oder Prüffälle. Ungeklärte Anforderungen ausdrücklich benennen.
+      placeholder: "- [ ] …"
+    validations:
+      required: true
+  - type: textarea
+    id: abgrenzung
+    attributes:
+      label: Offene Fragen und Abhängigkeiten
+      description: Was muss fachlich bestätigt werden, und welche andere Arbeit hängt damit zusammen?

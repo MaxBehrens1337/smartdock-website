@@ -2,31 +2,32 @@
 
 # SMARTDOCK Website
 
-Gemeinsamer Website-Stand und Stage-Vorschau für das Marketing-Team.
+Gemeinsame Arbeitsbasis für **Marlene, Adrian, Sönke und Max**. GitHub hält Code,
+Aufgaben, Entscheidungen und Prüfnachweise zusammen. Codex und Claude Code arbeiten
+nach denselben [Regeln](AGENTS.md).
 
-**Einstieg:** [Projektübersicht und nächste Schritte](docs/projektuebersicht.md)
-mit Bestand, vollständigem Staging-Umfang und offenen Entscheidungen.
+**Stand:** Die vollständige übernommene Website liegt seit PR #1 auf `main`.
+Der eigene Build funktioniert ohne Hostinger-Zugang. Teile der Anwendung sind noch
+kompiliert; der [Migrationsplan](docs/migration/aufbau.md) beschreibt ihren Ersatz.
+Die Website ist weiterhin eine Testvorschau mit offenen fachlichen Prüfungen.
 
-- [Staging-Vorschau](https://thitronik.github.io/smartdock-website/)
-- [Zusammenarbeit und Veröffentlichung](TEAM-WORKFLOW.md)
-- [Dokumentierter Stand der Vorschau](PAGES-STATUS.md)
-
-- `src/`, `content/`, `public/`: bearbeitbare Quellen und öffentliche Medien.
-- `vendor/website/`: vorläufig übernommene kompilierte Anwendungspakete.
-- `dist/`, `_site/`: erzeugte Vorschauen; nicht versioniert.
-- `staging`: Arbeitsstand für GitHub Pages. Änderungen lösen den Pages-Workflow aus.
-- `main`: freigegebene Stände; keine automatische Hetzner-Veröffentlichung.
-- `.github/workflows/stage-pages.yml`: prüft und baut die Vorschau für GitHub Pages.
-
-Ausgangsstand: SMARTDOCK-Nachbau Version 7, ursprünglicher Sites-Commit `dfc2867dbbf38c536b01fe62d02bfe4dc62f6104`. Dies ist kein ursprünglicher unkompilierter Hostinger-Projektexport.
-
-Newsletter, Kontakt und Konfigurationen befinden sich weiterhin im Vorschaumodus. Keine Zugangsdaten oder Kundendaten einchecken.
+| Ich möchte … | Einstieg |
+|---|---|
+| die Website ansehen | [Staging-Vorschau](https://thitronik.github.io/smartdock-website/) |
+| verstehen, was wir bauen | [Projektübersicht](docs/projektuebersicht.md) |
+| etwas ändern oder mit KI bearbeiten | [Zusammenarbeit](CONTRIBUTING.md) und [AI-First-Arbeitsweise](docs/arbeitsweise/ai-first.md) |
+| einen Fehler oder Auftrag erfassen | [GitHub-Aufgabe anlegen](https://github.com/Thitronik/smartdock-website/issues/new/choose) |
+| die nächste Arbeit auswählen | [Offene Aufgaben](https://github.com/Thitronik/smartdock-website/issues) |
+| eine technische Entscheidung nachvollziehen | [Entscheidungsübersicht](docs/entscheidungen/README.md) |
+| etwas im Repository finden | [Dokumentations- und Quellenübersicht](docs/README.md) |
 
 ## Lokal starten
 
 Mit Node 24:
 
 ```sh
+git fetch --all --prune
+npm run doctor
 npm ci
 npm run check
 npm run preview
@@ -35,14 +36,16 @@ npm run preview
 Vorschau: `http://127.0.0.1:4173/`. Nach Änderungen neu bauen und den Browser neu laden.
 Für den GitHub-Projektpfad: `npm run preview:pages`, dann `http://127.0.0.1:4174/smartdock-website/`.
 
-Der eigene Build benötigt keinen ursprünglichen Hostinger-Zugang. Die alten Anwendungspakete
-sind damit noch keine lesbaren Originalkomponenten. Grenzen und nächste Schritte stehen im
-[Aufbau- und Migrationsplan](docs/migration/aufbau.md). Gemeinsame Regeln: [AGENTS.md](AGENTS.md).
+`doctor` liest den lokalen Git-Stand und nennt offene Änderungen sowie Unterschiede
+zwischen den zuletzt abgerufenen Branches. `check` prüft Repository, Tests und beide
+Website-Builds. Alle [Befehle und Grenzen](CONTRIBUTING.md) sind dokumentiert.
 
-Die parallel vorbereitete [Datenbankmigration](database/README.md) bleibt separat; der Website-Build führt sie nicht aus und veröffentlicht sie nicht.
+## Veröffentlichung
 
-## Bestandsaufnahme und Qualität
+`staging` veröffentlicht die [GitHub-Pages-Vorschau](docs/betrieb/vorschau.md).
+`main` enthält übernommene Arbeitsstände und veröffentlicht keine Produktionsseite.
+Newsletter, Kontakt und Konfigurationen bleiben Vorschauabläufe.
 
-- [Bestandsaufnahme, Seitenverzeichnis und Weg zu main](docs/pruefung/bestandsaufnahme-2026-10-21.md)
-- [Konfigurator: beobachtete Preise und offene Prüffälle](docs/pruefung/konfigurator-prueftabelle.md)
-- [Aufgaben für die gemeinsame Arbeitsbasis](https://github.com/Thitronik/smartdock-website/issues/6)
+Produktionshosting, CMS und Backend-Anbindung sind noch offen. Die
+[Installation des MariaDB-Schemas](database/README.md) ist dokumentiert;
+Formulare und Mailversand sind daran noch nicht angebunden.
