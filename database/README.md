@@ -61,3 +61,17 @@ Die Website bleibt im Vorschaumodus.
 - Aufbewahrungsfristen festlegen. Tokenlinks in Outbox-Payloads sind kurzlebige
   Geheimnisse: nach Versand/Ablauf entfernen. Outbox-Empfänger und Payloads bei
   Löschanfragen ausdrücklich mitbereinigen; SET NULL anonymisiert sie nicht.
+
+## Entwurf für Firmen und persönliche Konten – 27.10.2026
+
+[Migration 002](migrations/002_dealers_and_users.sql) ist vorbereitet, **nicht
+installiert**. Sie ergänzt Firmen, persönliche Benutzer, unabhängige Mitgliedschaften,
+interne Rollen, Tokens/Sessions, Newsletterzuordnung und Verwaltungsereignisse.
+Die fünf obigen Bestandstabellen bleiben unverändert. Tabellen/SQL sind vom
+Website-Build ausgeschlossen. Zunächst in einer getrennten MariaDB-Testdatenbank
+prüfen; die Erstmigration 001 nicht erneut ausführen.
+
+Der verbindliche aktuelle [Ablauf für Verwaltung und Zugänge](../docs/betrieb/verwaltung-und-zugaenge.md)
+ersetzt die frühere Annahme „ein Händler = ein Login“. Firmenfreigabe für die Karte
+und Mitarbeiterfreigaben sind voneinander unabhängig. Die öffentliche Admin-Ansicht ist geschlossen. Eine lokale Gestaltungsvorschau
+enthält nur erfundene Beispieldaten; echte Konten werden erst auf Hetzner eingerichtet.
