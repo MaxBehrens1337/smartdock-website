@@ -73,5 +73,5 @@ prüfen; die Erstmigration 001 nicht erneut ausführen.
 
 Der verbindliche aktuelle [Ablauf für Verwaltung und Zugänge](../docs/betrieb/verwaltung-und-zugaenge.md)
 ersetzt die frühere Annahme „ein Händler = ein Login“. Firmenfreigabe für die Karte
-und Mitarbeiterfreigaben sind voneinander unabhängig. Der öffentliche Vorschau-CMS
-enthält nur erfundene Beispieldaten und hat keine echten Konten oder Berechtigungen.
+und Mitarbeiterfreigaben sind voneinander unabhängig. Die öffentliche Admin-Ansicht ist geschlossen. Eine lokale Gestaltungsvorschau
+enthält nur erfundene Beispieldaten; echte Konten werden erst auf Hetzner eingerichtet.

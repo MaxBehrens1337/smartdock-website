@@ -4,6 +4,7 @@ const badges={unlisted:'Nicht freigegeben',pending:'Wartet auf Prüfung',approve
 const icon={overview:'◈',dealers:'⌖',users:'♙',content:'▤',roles:'◇',newsletter:'✉'};
 export function mountAdminPortal(){
  const root=document.getElementById('admin-portal');if(!root)return()=>{};
+ if(!["localhost","127.0.0.1","[::1]"].includes(location.hostname)){document.title="SMARTDOCK · Administration";root.innerHTML=`<section class="admin-gate"><p class="eyebrow">SMARTDOCK · INTERN</p><h1>Administration</h1><p>Dieser Bereich ist ausschließlich für freigeschaltete Thitronik-Mitarbeiter bestimmt.</p><div class="admin-notice">Die geschützte Anmeldung wird auf Hetzner eingerichtet. In dieser Vorschau ist der Zugang geschlossen.</div></section>`;return()=>{};}
  let state=createDemoState(),view='overview',query='',selectedDealer=null,editing=false,preview=false;
  document.title='SMARTDOCK · Verwaltungsvorschau';
  function showNotice(text){const node=root.querySelector('[role="status"]');if(node)node.textContent=text;}

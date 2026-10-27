@@ -101,7 +101,7 @@ export async function createOutput(base = '') {
     add('data/' + name, bytes);
   }
   for (const name of ['dealer-link.js', 'dealer-portal.js', 'dealer-portal.css', 'admin-model.js', 'admin-portal.js', 'admin-portal.css']) add('assets/' + name, await readFile(path.join(ROOT, 'src', name)));
-  add('verwaltung/index.html', await readFile(path.join(ROOT, 'src/admin-portal.html')));
+  add('admin/index.html', await readFile(path.join(ROOT, 'src/admin-portal.html')));
   const dealerShell = await readFile(path.join(ROOT, 'src/dealer-portal.html'), 'utf8');
   for (const lang of ['de', 'en', 'fr', 'nl', 'es']) add((lang === 'de' ? '' : lang + '/') + 'haendlerbereich/index.html', dealerShell.replaceAll('%%LANG%%', lang));
   add('preview.js', await readFile(path.join(ROOT, 'src/preview.js')));

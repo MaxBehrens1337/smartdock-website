@@ -6,11 +6,10 @@ sind unabhängig. Interne Teamkonten erhalten rollenabhängigen Verwaltungszugri
 
 ## Aktuell umgesetzt: überprüfbare Grundlage
 
-`/verwaltung/` ist eine öffentliche Gestaltungsvorschau mit ausschließlich erfundenen
-Beispieldaten. Zugang über „Vorschau mit Beispieldaten öffnen“. Das ist ausdrücklich
-kein Login und kein Umgehen einer Zugriffskontrolle. Kein API-Aufruf, keine Speicherung
-in localStorage/sessionStorage, kein Datenbankzugriff und kein Mailversand. Neuladen
-setzt alle Vorschauänderungen zurück. Keine echten Daten in diese Vorschau eingeben.
+`/admin/` zeigt öffentlich ausschließlich einen geschlossenen Einstieg. Es gibt
+keinen öffentlichen Link und noch keine echte Anmeldung. Die Gestaltungsvorschau
+mit erfundenen Beispieldaten ist nur auf localhost verfügbar. Sie ruft keine API
+auf, speichert keine Daten dauerhaft und versendet keine E-Mails.
 
 Die native Seitenhülle liefert denselben Header/Footer wie die Startseite.
 Der deutschsprachige interne Entwurf enthält:
@@ -123,3 +122,21 @@ ist noch kein schreibender oder wiederholbarer Datenbankimport.
 4. Anfragen, Freigaben, Einladungen, Reset und geschützte Downloads Ende-zu-Ende testen.
 5. Erst danach bestehende Händler bewusst importieren und die Oberfläche auf echte
    APIs umstellen. Produktionsumschaltung und echte Einladungsmails separat freigeben.
+
+## Verbindliche interne Zugangsregel
+
+Der Einstieg ist ausschließlich direkt über /admin erreichbar, ohne Links in
+öffentlicher Navigation, Footer oder Sitemap. Die GitHub-Pages-Ansicht ist geschlossen;
+die fiktive Gestaltungsvorschau ist nur lokal verfügbar. Das ist noch keine
+Authentifizierung: Auf Hetzner müssen Seite und sämtliche Admin-API-Endpunkte
+serverseitig geschützt werden, bevor echte Daten eingebunden werden.
+
+Nur explizit freigegebene Teamkonten dürfen eine interne Rolle erhalten. Eine
+Adresse mit der Domain thitronik.de allein reicht nicht. Die vier initial freigegebenen Adressen werden ausschließlich privat hinterlegt.
+
+Die Liste liegt später in nichtöffentlich zugänglicher Konfiguration auf Hetzner.
+Zugriff erfordert zusätzlich bestätigte E-Mail, aktives persönliches Konto,
+interne Rolle und gültige Sitzung mit Zwei-Faktor-Prüfung. Keine Selbstregistrierung
+für interne Rollen; Händlerfreigaben berechtigen niemals zum Adminzugang.
+Passwortzurücksetzen vergibt oder erweitert keine Rolle. Die vier Konten sind
+noch nicht eingerichtet. Unberechtigte API-Anfragen müssen 401/403 zurückgeben.
