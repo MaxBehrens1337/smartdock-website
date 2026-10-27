@@ -161,5 +161,16 @@ test('Cookie-Auswahl zeigt gleichwertige Buttons mit getrennten Einwilligungsakt
 });
 
 test('Verwaltungsvorschau veröffentlicht keine Backend- oder Importdateien',async()=>{
- for(const base of ['',PAGES_BASE]){const files=await createOutput(base);const html=files.get('verwaltung/index.html').toString();assert.ok(html.includes('noindex,nofollow'));assert.ok(html.includes(base+'/assets/admin-portal.css'));assert.ok(html.includes('id="root"'));assert.ok(files.has('assets/admin-model.js'));for(const name of files.keys())assert.ok(!name.startsWith('database/')&&!name.endsWith('.sql')&&!name.includes('9_dealers_records'));}
+ for(const base of ['',PAGES_BASE]){const files=await createOutput(base);const html=files.get('admin/index.html').toString();assert.ok(html.includes('noindex,nofollow'));assert.ok(html.includes(base+'/assets/admin-portal.css'));assert.ok(html.includes('id="root"'));assert.ok(files.has('assets/admin-model.js'));for(const name of files.keys())assert.ok(!name.startsWith('database/')&&!name.endsWith('.sql')&&!name.includes('9_dealers_records'));}
 });
+
+ test("Öffentlicher Admineinstieg bietet weder Beispieldaten noch Anmeldeformular",async()=>{
+ const {readFile}=await import("node:fs/promises");
+ const source=(await readFile(new URL("../src/admin-portal.js",import.meta.url),"utf8")).replace(/^import .*;\n/,"").replace("export function mountAdminPortal","function mountAdminPortal");
+ for(const hostname of ["thitronik.github.io","www.smartdock.de","smartdock.de"]){
+ const root={innerHTML:""};const context={location:{hostname},document:{getElementById:()=>root}};
+ vm.runInNewContext(source+";mountAdminPortal();",context);
+ assert.match(root.innerHTML,/Zugang geschlossen/);assert.doesNotMatch(root.innerHTML,/<button|<form|<input|Beispieldaten öffnen/);
+ }
+ const files=await createOutput();assert.ok(files.has("admin/index.html"));assert.ok(!files.has("verwaltung/index.html"));
+ });
