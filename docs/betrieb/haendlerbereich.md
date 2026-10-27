@@ -94,3 +94,14 @@ Die öffentliche Gestaltungsvorschau enthält sechs Kacheln mit eigens generiert
 SMARTDOCK-Bildern: News/Termine, Werkstattunterlagen, Einbaurichtzeiten, Schulungen/Videos,
 Beratung/Unterstützung, Bestellen/Herunterladen. Inhalte liefert das Team später.
 Kacheln enthalten noch keine Links zu privaten Dateien und keine erfundenen Unterlagen.
+
+## Aktualisierte Architektur vom 27. Oktober 2026
+
+Die ursprüngliche Annahme eines gemeinsamen Firmen-/Kontostatus ist durch Adrians
+neue Vorgabe ersetzt: eine Firma kann mehrere persönliche Mitarbeiterkonten haben.
+Kartenfreigabe und Mitarbeiterfreigaben sind unabhängig. Firmenkontakt und Loginadresse
+müssen nicht identisch sein. Maßgeblich ist der neue
+[Verwaltungs- und Zugangsplan](verwaltung-und-zugaenge.md).
+Die öffentliche Händlerliste und Mitarbeiterzugänge verwenden später denselben
+Firmenstamm mit getrennten Freigaben. Das alte Konzept einer separaten zweiten
+Newsletterkontaktliste ist durch eine Zuordnung zu den bestehenden Abonnements ersetzt.
